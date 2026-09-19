@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rihla Vibes - Discover Morocco</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #0a1120; color: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+:root { --gold: #d4af37; --dark: #0a1120; --card: #111c2e; }
+
+header { position: fixed; top: 0; width: 100%; z-index: 1000;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 20px; background: rgba(10,17,32,0.95); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212,175,55,0.2); }
+.logo { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--gold); font-weight: bold; }
+.logo span { display: block; font-size: 8px; color: #fff; letter-spacing: 2px; font-family: 'Poppins', sans-serif; font-weight: 300; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+nav ul li a { font-size: 11px; transition: 0.3s; }
+nav ul li a:hover { color: var(--gold); }
+.lang { display: flex; gap: 6px; font-size: 10px; font-weight: 600; }
+.lang span.active { color: var(--gold); border-bottom: 2px solid var(--gold); }
+
+.hero { min-height: 100vh; position: relative;
+  background: linear-gradient(rgba(10,17,32,0.4), rgba(10,17,32,0.95)), 
+  url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070') center/cover;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 100px 20px 40px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--gold); margin-bottom: 15px; line-height: 1.1; }
+.hero p { font-size: 14px; max-width: 600px; margin-bottom: 30px; opacity: 0.9; line-height: 1.6; }
+
+.search { background: #fff; border-radius: 50px; display: flex; align-items: center;
+  padding: 5px 10px; width: 100%; max-width: 650px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+.search input { border: none; outline: none; flex: 1; padding: 10px; font-size: 13px; font-family: 'Poppins', sans-serif; color: #333; }
+.search .divider { width: 1px; height: 20px; background: #ddd; margin: 0 4px; }
+.search button { background: var(--gold); border: none; padding: 10px 18px; border-radius: 50px;
+  color: #000; font-weight: 600; cursor: pointer; font-size: 12px; }
+
+section { padding: 60px 20px; }
+.subtitle { color: var(--gold); font-size: 10px; letter-spacing: 4px; text-transform: uppercase; text-align: center; margin-bottom: 10px; }
+.title { font-family: 'Playfair Display', serif; font-size: 26px; text-align: center; margin-bottom: 35px; line-height: 1.2; }
+
+.services { background: #0d1626; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; max-width: 1300px; margin: 0 auto; }
+.card { background: var(--card); border-radius: 18px; overflow: hidden; text-align: center;
+  transition: 0.4s; border: 1px solid rgba(212,175,55,0.15); cursor: pointer; }
+.card:hover { transform: translateY(-8px); border-color: var(--gold); }
+.card img { width: 100%; height: 130px; object-fit: cover; }
+.card .icon { width: 50px; height: 50px; background: var(--gold); border-radius: 50%;
+  display: flex; justify-content: center; align-items: center; margin: -25px auto 10px;
+  border: 4px solid var(--card); font-size: 22px; }
+.card h3 { font-family: 'Playfair Display', serif; font-size: 15px; margin-bottom: 6px; padding: 0 10px; }
+.card p { font-size: 11px; opacity: 0.7; padding: 0 10px 16px; line-height: 1.5; }
+
+.dest { background: var(--dark); }
+.dest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; max-width: 1300px; margin: 0 auto; }
+.dest-card { position: relative; border-radius: 15px; overflow: hidden; height: 200px; cursor: pointer; }
+.dest-card img { width: 100%; height: 100%; object-fit: cover; }
+.dest-card .overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9)); text-align: left; }
+.dest-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--gold); }
+
+footer { background: #050a14; padding: 25px 20px; text-align: center;
+  font-size: 11px; opacity: 0.7; border-top: 1px solid rgba(212,175,55,0.2); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Rihla Vibes <span>More Than a Trip</span></div>
+  <nav>
+    <ul>
+      <li><a href="#" style="color: var(--gold);">Accueil</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="lang"><span class="active">FR</span><span>AR</span><span>EN</span></div>
+</header>
+
+<section class="hero">
+  <h1>Le Maroc<br>une destination infinie</h1>
+  <p>Des montagnes aux plages, en passant par les villes impériales, vivez des expériences uniques au Maroc.</p>
+  <div class="search">
+    <input type="text" placeholder="Où voulez-vous aller ?">
+    <div class="divider"></div>
+    <button>🔍 Rechercher</button>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="subtitle">— NOS SERVICES —</div>
+  <h2 class="title">Des expériences uniques, sur mesure</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600" alt="Hôtels">
+      <div class="icon">🏨</div>
+      <h3>Hôtels & Riads</h3>
+      <p>Réservation d'hébergement dans tout le Maroc</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600" alt="Transport">
+      <div class="icon">🚐</div>
+      <h3>Transport</h3>
+      <p>Transferts & déplacements en toute sécurité</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=600" alt="Restaurants">
+      <div class="icon">🍽️</div>
+      <h3>Restaurants</h3>
+      <p>Tables & gastronomie marocaine</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600" alt="Circuits">
+      <div class="icon">🗺️</div>
+      <h3>Circuits & Voyages</h3>
+      <p>Itinéraires sur mesure à travers le Maroc</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600" alt="Événements">
+      <div class="icon">🎉</div>
+      <h3>Événements</h3>
+      <p>Moments uniques à vivre au Maroc</p>
+    </div>
+  </div>
+</section>
+
+<section class="dest" id="destinations">
+  <div class="subtitle">— DESTINATIONS POPULAIRES —</div>
+  <h2 class="title">Les plus belles villes du Maroc</h2>
+  <div class="dest-grid">
+    <div class="dest-card">
+      <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=600" alt="Marrakech">
+      <div class="overlay"><h3>Marrakech</h3></div>
+    </div>
+    <div class="dest-card">
+      <img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?q=80&w=600" alt="Fès">
+      <div class="overlay"><h3>Fès</h3></div>
+    </div>
+    <div class="dest-card">
+      <img src="https://images.unsplash.com/photo-1553603227-2358aabe821e?q=80&w=600" alt="Chefchaouen">
+      <div class="overlay"><h3>Chefchaouen</h3></div>
+    </div>
+    <div class="dest-card">
+      <img src="https://images.unsplash.com/photo-1597211833712-5e41f7c8b8b0?q=80&w=600" alt="Essaouira">
+      <div class="overlay"><h3>Essaouira</h3></div>
+    </div>
+    <div class="dest-card">
+      <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?q=80&w=600" alt="Tanger">
+      <div class="overlay"><h3>Tanger</h3></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>&copy; 2024 Rihla Vibes. Tous droits réservés.</p>
+  <p style="margin-top: 8px;">📧 rihlavibes@gmail.com | 📱 +212 6XX XXX XXX</p>
+</footer>
+
+</body>
+</html>
