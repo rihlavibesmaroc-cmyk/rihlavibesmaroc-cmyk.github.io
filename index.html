@@ -3,7 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rihla Vibes - Discover Morocco</title>
+
+<!-- ========== SEO الأساسي ========== -->
+<title>Rihla Vibes - Agence de Voyage au Maroc | Séjours, Circuits & Découvertes</title>
+<meta name="description" content="Rihla Vibes - Votre agence de voyage au Maroc. Découvrez Marrakech, Fès, Chefchaouen, le Sahara et bien plus. Séjours sur mesure, circuits, hébergements et expériences uniques.">
+<meta name="keywords" content="voyage Maroc, agence voyage Maroc, séjour Maroc, circuit Maroc, Marrakech, Fès, Chefchaouen, Sahara, tourisme Maroc, riad Maroc, désert Maroc, Rihla Vibes">
+<meta name="author" content="Rihla Vibes">
+<meta name="robots" content="index, follow">
+<meta name="language" content="French">
+<meta name="revisit-after" content="7 days">
+
+<!-- ========== Open Graph (فيسبوك، واتساب) ========== -->
+<meta property="og:title" content="Rihla Vibes - Agence de Voyage au Maroc">
+<meta property="og:description" content="Découvrez le Maroc autrement. Séjours, circuits, hébergements et expériences uniques.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rihlavibesmaroc-cmyk.github.io/">
+<meta property="og:image" content="https://rihlavibesmaroc-cmyk.github.io/logo.png">
+<meta property="og:site_name" content="Rihla Vibes">
+<meta property="og:locale" content="fr_FR">
+
+<!-- ========== Twitter Card ========== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rihla Vibes - Agence de Voyage au Maroc">
+<meta name="twitter:description" content="Découvrez le Maroc autrement.">
+<meta name="twitter:image" content="https://rihlavibesmaroc-cmyk.github.io/logo.png">
+
+<!-- ========== Google Verification ========== -->
+<!-- الصق هنا الكود اللي غادي يعطيك Google Search Console -->
+<!-- <meta name="google-site-verification" content="xxxxx" /> -->
+
+<!-- ========== Structured Data (Schema.org) ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Rihla Vibes",
+  "description": "Agence de voyage au Maroc - Séjours, circuits et expériences uniques",
+  "url": "https://rihlavibesmaroc-cmyk.github.io/",
+  "logo": "https://rihlavibesmaroc-cmyk.github.io/logo.png",
+  "email": "rihlavibes@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "MA",
+    "addressLocality": "Marrakech"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Morocco"
+  },
+  "serviceType": [
+    "Réservation d'hébergement",
+    "Transport touristique",
+    "Circuits & Voyages",
+    "Restauration",
+    "Événements & Activités"
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,7 +69,6 @@ body { font-family: 'Poppins', sans-serif; background: #0a1120; color: #fff; ove
 a { text-decoration: none; color: inherit; }
 :root { --gold: #d4af37; --gold-light: #f4d47c; --dark: #0a1120; --card: #111c2e; }
 
-/* ========== HEADER ========== */
 header { position: fixed; top: 0; width: 100%; z-index: 1000;
   display: flex; justify-content: space-between; align-items: center;
   padding: 15px 40px; background: rgba(10,17,32,0.9); backdrop-filter: blur(20px);
@@ -56,189 +112,56 @@ nav ul li a:hover { color: var(--gold); }
 .lang span { cursor: pointer; padding: 4px 10px; border-radius: 20px; transition: 0.3s; }
 .lang span.active { color: #000; background: var(--gold); }
 
-/* ========== HERO ========== */
 .hero { min-height: 100vh; position: relative;
   background: linear-gradient(135deg, #0a1120 0%, #1a2540 50%, #0a1120 100%);
   display: flex; flex-direction: column; justify-content: center; align-items: center;
   text-align: center; padding: 120px 20px 60px; overflow: hidden; }
-
 .hero::before {
   content: ''; position: absolute; inset: 0;
   background-image: 
     radial-gradient(circle at 20% 30%, rgba(212,175,55,0.15) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(212,175,55,0.1) 0%, transparent 40%);
-  animation: bgMove 15s ease-in-out infinite alternate;
 }
-@keyframes bgMove {
-  0% { transform: scale(1) rotate(0deg); }
-  100% { transform: scale(1.1) rotate(5deg); }
-}
-
 .hero-content { position: relative; z-index: 2; }
+.hero .tagline { color: var(--gold); font-size: 12px; letter-spacing: 8px; text-transform: uppercase; margin-bottom: 25px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 65px; color: #fff; margin-bottom: 25px; line-height: 1.05; }
+.hero h1 span { color: var(--gold); font-style: italic; }
+.hero p { font-size: 15px; max-width: 650px; margin: 0 auto 40px; opacity: 0.75; line-height: 1.8; }
 
-.hero .arabic {
-  font-family: 'Playfair Display', serif;
-  font-size: 80px; color: rgba(212,175,55,0.08);
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  letter-spacing: 20px; white-space: nowrap;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero .tagline { 
-  color: var(--gold); font-size: 12px; letter-spacing: 8px; 
-  text-transform: uppercase; margin-bottom: 25px;
-  animation: fadeIn 1.5s ease-out;
-}
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.hero h1 { 
-  font-family: 'Playfair Display', serif; 
-  font-size: 65px; color: #fff; 
-  margin-bottom: 25px; line-height: 1.05;
-  animation: fadeUp 1.2s ease-out;
-}
-.hero h1 span { 
-  color: var(--gold); 
-  font-style: italic;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.hero p { 
-  font-size: 15px; max-width: 650px; margin: 0 auto 40px; 
-  opacity: 0.75; line-height: 1.8; font-weight: 300;
-  animation: fadeUp 1.4s ease-out;
-}
-
-.search { 
-  background: rgba(255,255,255,0.08); 
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(212,175,55,0.3);
-  border-radius: 60px; 
-  display: flex; align-items: center;
-  padding: 8px 10px 8px 30px; 
-  width: 100%; max-width: 700px; 
-  margin: 0 auto;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  animation: fadeUp 1.6s ease-out;
-}
-.search input { 
-  border: none; outline: none; flex: 1; padding: 12px; 
-  font-size: 13px; font-family: 'Poppins', sans-serif; 
-  color: #fff; background: transparent;
-}
+.search { background: rgba(255,255,255,0.08); backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,175,55,0.3); border-radius: 60px; display: flex; align-items: center;
+  padding: 8px 10px 8px 30px; width: 100%; max-width: 700px; margin: 0 auto; }
+.search input { border: none; outline: none; flex: 1; padding: 12px; font-size: 13px; color: #fff; background: transparent; }
 .search input::placeholder { color: rgba(255,255,255,0.5); }
-.search .divider { width: 1px; height: 25px; background: rgba(212,175,55,0.3); margin: 0 6px; }
-.search button { 
-  background: linear-gradient(135deg, var(--gold), var(--gold-light)); 
-  border: none; padding: 14px 30px; border-radius: 50px;
-  color: #000; font-weight: 600; cursor: pointer; font-size: 12px;
-  transition: 0.3s;
-}
-.search button:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(212,175,55,0.6); }
+.search button { background: linear-gradient(135deg, var(--gold), var(--gold-light)); border: none; padding: 14px 30px; border-radius: 50px;
+  color: #000; font-weight: 600; cursor: pointer; font-size: 12px; }
 
-/* ========== SECTIONS ========== */
 section { padding: 100px 40px; }
 .subtitle { color: var(--gold); font-size: 11px; letter-spacing: 6px; text-transform: uppercase; text-align: center; margin-bottom: 15px; }
 .title { font-family: 'Playfair Display', serif; font-size: 42px; text-align: center; margin-bottom: 60px; line-height: 1.2; }
 .title span { font-style: italic; color: var(--gold); }
 
-/* ========== SERVICES ========== */
-.services { background: linear-gradient(180deg, #0d1626, #0a1120); position: relative; }
+.services { background: linear-gradient(180deg, #0d1626, #0a1120); }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
-
-.card { 
-  background: linear-gradient(145deg, #111c2e, #0d1626); 
-  border-radius: 24px; 
-  text-align: center;
-  transition: 0.5s; 
-  border: 1px solid rgba(212,175,55,0.2); 
-  cursor: pointer; 
-  padding: 40px 20px 30px;
-  position: relative;
-  overflow: hidden;
-}
-.card::before {
-  content: ''; position: absolute; top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(212,175,55,0.05), transparent);
-  transform: rotate(45deg);
-  transition: 0.5s;
-  opacity: 0;
-}
-.card:hover::before { opacity: 1; animation: shineCard 1.5s linear infinite; }
-@keyframes shineCard {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) rotate(45deg); }
-}
-
-.card:hover { 
-  transform: translateY(-12px); 
-  border-color: var(--gold); 
-  box-shadow: 0 30px 60px rgba(212,175,55,0.2); 
-}
-
+.card { background: linear-gradient(145deg, #111c2e, #0d1626); border-radius: 24px; text-align: center;
+  transition: 0.5s; border: 1px solid rgba(212,175,55,0.2); cursor: pointer; padding: 40px 20px 30px; }
+.card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: 0 30px 60px rgba(212,175,55,0.2); }
 .card .icon-box {
   width: 110px; height: 110px;
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  border-radius: 50%;
-  display: flex; justify-content: center; align-items: center;
-  margin: 0 auto 20px;
-  font-size: 55px;
-  box-shadow: 0 15px 40px rgba(212,175,55,0.4);
-  transition: 0.5s;
-  position: relative;
-  z-index: 2;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+  margin: 0 auto 20px; font-size: 55px;
+  box-shadow: 0 15px 40px rgba(212,175,55,0.4); transition: 0.5s;
 }
 .card:hover .icon-box { transform: rotate(360deg) scale(1.1); }
+.card h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 12px; color: var(--gold); }
+.card p { font-size: 12px; opacity: 0.7; line-height: 1.7; }
 
-.card h3 { 
-  font-family: 'Playfair Display', serif; 
-  font-size: 20px; 
-  margin-bottom: 12px; 
-  color: var(--gold);
-  position: relative; z-index: 2;
-}
-.card p { 
-  font-size: 12px; 
-  opacity: 0.7; 
-  line-height: 1.7;
-  position: relative; z-index: 2;
-}
-
-/* ========== DESTINATIONS ========== */
 .dest { background: #0a1120; }
-
-.dest-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 20px; 
-  max-width: 1400px; 
-  margin: 0 auto; 
-}
-
-.dest-card { 
-  position: relative; 
-  border-radius: 20px; 
-  overflow: hidden; 
-  height: 220px; 
-  cursor: pointer;
-  border: 1px solid rgba(212,175,55,0.2); 
-  transition: 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-}
-
-/* خلفيات مختلفة لكل مدينة */
+.dest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; }
+.dest-card { position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer;
+  border: 1px solid rgba(212,175,55,0.2); transition: 0.5s;
+  display: flex; align-items: center; justify-content: center; padding: 30px; }
 .dest-card:nth-child(1) { background: linear-gradient(135deg, #d4af37 0%, #8b1a1a 100%); }
 .dest-card:nth-child(2) { background: linear-gradient(135deg, #2c5364 0%, #0f2027 100%); }
 .dest-card:nth-child(3) { background: linear-gradient(135deg, #5b9bd5 0%, #1e3c72 100%); }
@@ -251,84 +174,21 @@ section { padding: 100px 40px; }
 .dest-card:nth-child(10) { background: linear-gradient(135deg, #16a085 0%, #0e6251 100%); }
 .dest-card:nth-child(11) { background: linear-gradient(135deg, #7fb3d5 0%, #2c3e50 100%); }
 .dest-card:nth-child(12) { background: linear-gradient(135deg, #3498db 0%, #1b4f72 100%); }
-
-.dest-card::before {
-  content: ''; position: absolute; inset: 0;
-  background: rgba(0,0,0,0.35);
-  transition: 0.5s;
-}
-.dest-card:hover::before { background: rgba(0,0,0,0.1); }
-
-.dest-card::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.9) 100%);
-  pointer-events: none;
-}
-
-.dest-card:hover { 
-  transform: translateY(-10px); 
-  border-color: var(--gold); 
-  box-shadow: 0 30px 60px rgba(212,175,55,0.3);
-}
-
-.dest-icon {
-  font-size: 70px;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
-  transition: 0.5s;
-}
+.dest-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.9) 100%); pointer-events: none; }
+.dest-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 30px 60px rgba(212,175,55,0.3); }
+.dest-icon { font-size: 70px; position: relative; z-index: 2; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); transition: 0.5s; }
 .dest-card:hover .dest-icon { transform: scale(1.2) rotate(-5deg); }
+.dest-card .overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; text-align: center; z-index: 2; }
+.dest-card h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); letter-spacing: 1px; text-shadow: 0 3px 10px rgba(0,0,0,0.8); }
+.dest-card .country { font-size: 9px; color: #fff; opacity: 0.7; letter-spacing: 4px; margin-top: 5px; }
 
-.dest-card .overlay { 
-  position: absolute; 
-  bottom: 0; left: 0; 
-  width: 100%; 
-  padding: 20px 20px 20px;
-  text-align: center; 
-  z-index: 2;
-}
-
-.dest-card h3 { 
-  font-family: 'Playfair Display', serif; 
-  font-size: 22px; 
-  color: var(--gold); 
-  letter-spacing: 1px;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.8);
-}
-
-.dest-card .country { 
-  font-size: 9px; 
-  color: #fff; 
-  opacity: 0.7; 
-  letter-spacing: 4px; 
-  margin-top: 5px;
-}
-
-/* ========== FOOTER ========== */
-footer { 
-  background: linear-gradient(180deg, #050a14, #000); 
-  padding: 60px 20px 40px; 
-  text-align: center;
-  border-top: 1px solid rgba(212,175,55,0.2); 
-}
-footer .footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px; font-weight: bold;
+footer { background: linear-gradient(180deg, #050a14, #000); padding: 60px 20px 40px; text-align: center; border-top: 1px solid rgba(212,175,55,0.2); }
+footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: bold;
   background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 10px;
-}
-footer .gold-line { 
-  width: 100px; height: 2px; 
-  background: linear-gradient(90deg, transparent, var(--gold), transparent); 
-  margin: 20px auto; 
-}
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+footer .gold-line { width: 100px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 20px auto; }
 footer p { font-size: 12px; opacity: 0.6; margin: 8px 0; }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   header { padding: 12px 15px; }
   nav ul { gap: 12px; }
@@ -336,7 +196,6 @@ footer p { font-size: 12px; opacity: 0.6; margin: 8px 0; }
   .logo-icon { width: 38px; height: 38px; font-size: 18px; }
   .logo-text { font-size: 18px; }
   .hero h1 { font-size: 40px; }
-  .hero .arabic { font-size: 50px; }
   .title { font-size: 28px; }
   section { padding: 60px 20px; }
   .card .icon-box { width: 90px; height: 90px; font-size: 45px; }
@@ -346,7 +205,6 @@ footer p { font-size: 12px; opacity: 0.6; margin: 8px 0; }
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
 <header>
   <div class="logo">
     <div class="logo-icon">✈️</div>
@@ -363,9 +221,7 @@ footer p { font-size: 12px; opacity: 0.6; margin: 8px 0; }
   <div class="lang"><span class="active">FR</span><span>AR</span><span>EN</span></div>
 </header>
 
-<!-- ========== HERO ========== -->
 <section class="hero">
-  <div class="arabic">مغرب</div>
   <div class="hero-content">
     <div class="tagline">Voyagez Autrement</div>
     <h1>Le Maroc,<br>une destination <span>infinie</span></h1>
@@ -378,151 +234,37 @@ footer p { font-size: 12px; opacity: 0.6; margin: 8px 0; }
   </div>
 </section>
 
-<!-- ========== SERVICES ========== -->
 <section class="services" id="services">
   <div class="subtitle">— Nos Services —</div>
   <h2 class="title">Des expériences <span>uniques</span>, sur mesure</h2>
   <div class="grid">
-    
-    <div class="card">
-      <div class="icon-box">🏛️</div>
-      <h3>Hôtels & Riads</h3>
-      <p>Réservation d'hébergement d'exception dans tout le Maroc</p>
-    </div>
-    
-    <div class="card">
-      <div class="icon-box">🚌</div>
-      <h3>Transport</h3>
-      <p>Transferts privés & déplacements en toute sécurité</p>
-    </div>
-    
-    <div class="card">
-      <div class="icon-box">🍲</div>
-      <h3>Restaurants</h3>
-      <p>Tables raffinées & gastronomie marocaine authentique</p>
-    </div>
-    
-    <div class="card">
-      <div class="icon-box">⛰️</div>
-      <h3>Circuits & Voyages</h3>
-      <p>Itinéraires sur mesure à travers le Maroc</p>
-    </div>
-    
-    <div class="card">
-      <div class="icon-box">🎭</div>
-      <h3>Événements</h3>
-      <p>Moments inoubliables à vivre au Maroc</p>
-    </div>
-    
+    <div class="card"><div class="icon-box">🏛️</div><h3>Hôtels & Riads</h3><p>Réservation d'hébergement d'exception dans tout le Maroc</p></div>
+    <div class="card"><div class="icon-box">🚌</div><h3>Transport</h3><p>Transferts privés & déplacements en toute sécurité</p></div>
+    <div class="card"><div class="icon-box">🍲</div><h3>Restaurants</h3><p>Tables raffinées & gastronomie marocaine authentique</p></div>
+    <div class="card"><div class="icon-box">⛰️</div><h3>Circuits & Voyages</h3><p>Itinéraires sur mesure à travers le Maroc</p></div>
+    <div class="card"><div class="icon-box">🎭</div><h3>Événements</h3><p>Moments inoubliables à vivre au Maroc</p></div>
   </div>
 </section>
 
-<!-- ========== DESTINATIONS ========== -->
 <section class="dest" id="destinations">
   <div class="subtitle">— Destinations Populaires —</div>
   <h2 class="title">Les plus belles <span>villes</span> du Maroc</h2>
   <div class="dest-grid">
-    
-    <div class="dest-card">
-      <div class="dest-icon">🕌</div>
-      <div class="overlay">
-        <h3>Marrakech</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🏛️</div>
-      <div class="overlay">
-        <h3>Fès</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">💙</div>
-      <div class="overlay">
-        <h3>Chefchaouen</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🌊</div>
-      <div class="overlay">
-        <h3>Essaouira</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">⛵</div>
-      <div class="overlay">
-        <h3>Tanger</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🕌</div>
-      <div class="overlay">
-        <h3>Casablanca</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🏖️</div>
-      <div class="overlay">
-        <h3>Agadir</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🎬</div>
-      <div class="overlay">
-        <h3>Ouarzazate</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🐪</div>
-      <div class="overlay">
-        <h3>Merzouga</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🏛️</div>
-      <div class="overlay">
-        <h3>Rabat</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🌲</div>
-      <div class="overlay">
-        <h3>Ifrane</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
-    <div class="dest-card">
-      <div class="dest-icon">🎨</div>
-      <div class="overlay">
-        <h3>Asilah</h3>
-        <div class="country">MAROC</div>
-      </div>
-    </div>
-    
+    <div class="dest-card"><div class="dest-icon">🕌</div><div class="overlay"><h3>Marrakech</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🏛️</div><div class="overlay"><h3>Fès</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">💙</div><div class="overlay"><h3>Chefchaouen</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🌊</div><div class="overlay"><h3>Essaouira</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">⛵</div><div class="overlay"><h3>Tanger</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🕌</div><div class="overlay"><h3>Casablanca</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🏖️</div><div class="overlay"><h3>Agadir</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🎬</div><div class="overlay"><h3>Ouarzazate</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🐪</div><div class="overlay"><h3>Merzouga</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🏛️</div><div class="overlay"><h3>Rabat</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🌲</div><div class="overlay"><h3>Ifrane</h3><div class="country">MAROC</div></div></div>
+    <div class="dest-card"><div class="dest-icon">🎨</div><div class="overlay"><h3>Asilah</h3><div class="country">MAROC</div></div></div>
   </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
 <footer id="contact">
   <div class="footer-logo">Rihla Vibes</div>
   <div class="gold-line"></div>
