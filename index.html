@@ -98,4 +98,2980 @@ img{
   right:0;
   z-index:1000;
   padding:14px 22px;
-  background:linear
+  background:linear-gradient(
+    180deg,
+    rgba(3,12,19,.92),
+    rgba(3,12,19,.55),
+    transparent
+  );
+}
+
+.header-inner{
+  max-width:1320px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+
+.logo-svg{
+  width:62px;
+  height:50px;
+  flex:none;
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:.9;
+}
+
+.brand-name{
+  font-family:"Cormorant Garamond",serif;
+  font-size:29px;
+  font-weight:700;
+  letter-spacing:.4px;
+  background:linear-gradient(135deg,#fff7d7,#d8ad55,#fff1b6);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.brand-tag{
+  color:#e8d6a8;
+  font-size:8px;
+  letter-spacing:2.3px;
+  text-transform:uppercase;
+  margin-top:7px;
+  white-space:nowrap;
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.lang-switch{
+  display:flex;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(3,14,22,.7);
+  backdrop-filter:blur(15px);
+  border-radius:999px;
+  padding:4px;
+}
+
+.lang-btn{
+  border:0;
+  background:transparent;
+  color:#cbd5da;
+  border-radius:999px;
+  padding:7px 9px;
+  font-size:11px;
+  font-weight:700;
+}
+
+.lang-btn.active{
+  color:#071521;
+  background:linear-gradient(135deg,#f5db94,#c89b43);
+}
+
+.menu-btn{
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  border:1px solid rgba(216,173,85,.4);
+  color:#fff;
+  background:rgba(4,17,27,.7);
+  backdrop-filter:blur(12px);
+  display:grid;
+  place-items:center;
+  font-size:20px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:790px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(3,10,15,.32) 0%,
+      rgba(3,13,20,.12) 32%,
+      rgba(4,14,22,.48) 65%,
+      #06131e 100%
+    ),
+    url("https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=90&w=2200");
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.01);
+}
+
+.hero-glow{
+  position:absolute;
+  inset:auto 0 0;
+  height:50%;
+  background:
+    radial-gradient(
+      ellipse at center bottom,
+      rgba(216,173,85,.16),
+      transparent 65%
+    );
+  z-index:-1;
+}
+
+.hero-content{
+  width:100%;
+  max-width:1320px;
+  margin:auto;
+  padding:0 24px 80px;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:17px;
+}
+
+.hero-kicker:before{
+  content:"";
+  width:30px;
+  height:1px;
+  background:var(--gold);
+}
+
+.hero h1{
+  max-width:850px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(48px,7vw,88px);
+  line-height:.9;
+  font-weight:600;
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--gold2);
+}
+
+.hero p{
+  max-width:650px;
+  margin:25px 0;
+  color:#e3e9ec;
+  line-height:1.7;
+  font-size:16px;
+}
+
+.hero-search{
+  max-width:690px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(4,15,24,.78);
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(18px);
+  border-radius:18px;
+  padding:7px;
+  box-shadow:0 20px 50px rgba(0,0,0,.28);
+}
+
+.hero-search-icon{
+  padding-left:13px;
+  color:var(--gold);
+}
+
+.hero-search input{
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:white;
+  padding:14px 4px;
+}
+
+.hero-search input::placeholder{
+  color:#aeb8bd;
+}
+
+.search-btn{
+  border:0;
+  border-radius:13px;
+  padding:13px 20px;
+  color:#071521;
+  font-weight:800;
+  background:linear-gradient(135deg,#f2d58e,#c8963e);
+}
+
+/* ================= COMMON ================= */
+
+.section{
+  max-width:1320px;
+  margin:auto;
+  padding:100px 24px;
+}
+
+.section-head{
+  margin-bottom:38px;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+.section-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(38px,5vw,60px);
+  line-height:1;
+  font-weight:600;
+}
+
+.section-subtitle{
+  max-width:680px;
+  color:var(--muted);
+  line-height:1.7;
+  margin-top:15px;
+}
+
+.gold-line{
+  width:70px;
+  height:2px;
+  margin-top:20px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  position:relative;
+}
+
+.services:before{
+  content:"✦";
+  position:absolute;
+  top:45px;
+  right:7%;
+  color:rgba(216,173,85,.12);
+  font-size:100px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.service-card{
+  min-height:245px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:25px;
+  background:#0b202e;
+  box-shadow:var(--shadow);
+  transition:.35s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(216,173,85,.45);
+}
+
+.service-card img{
+  position:absolute;
+  inset:0;
+  height:100%;
+  object-fit:cover;
+  opacity:.75;
+  transition:.5s;
+}
+
+.service-card:hover img{
+  transform:scale(1.06);
+}
+
+.service-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,15,24,.96),
+      rgba(4,15,24,.68) 50%,
+      rgba(4,15,24,.12)
+    );
+}
+
+.service-content{
+  position:relative;
+  z-index:2;
+  min-height:245px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:30px;
+  max-width:590px;
+}
+
+.service-icon{
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:1px solid rgba(216,173,85,.75);
+  background:linear-gradient(135deg,#f0d18b,#a97528);
+  color:#071521;
+  font-size:25px;
+  box-shadow:0 8px 30px rgba(216,173,85,.2);
+  margin-bottom:18px;
+}
+
+.service-content h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  color:#fff3d0;
+}
+
+.service-content p{
+  color:#c2ccd1;
+  line-height:1.55;
+  font-size:14px;
+  margin:7px 0 16px;
+}
+
+.service-link{
+  color:var(--gold2);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:800;
+}
+
+/* ================= QUICK SERVICES ================= */
+
+.quick-services{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding-bottom:8px;
+  scrollbar-width:none;
+}
+
+.quick-services::-webkit-scrollbar{
+  display:none;
+}
+
+.quick{
+  min-width:125px;
+  padding:18px 12px;
+  border:1px solid rgba(216,173,85,.16);
+  background:rgba(255,255,255,.035);
+  border-radius:18px;
+  text-align:center;
+}
+
+.quick-icon{
+  width:48px;
+  height:48px;
+  margin:0 auto 9px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:var(--gold2);
+  background:rgba(216,173,85,.1);
+  border:1px solid rgba(216,173,85,.3);
+  font-size:20px;
+}
+
+.quick span{
+  color:#dce4e7;
+  font-size:12px;
+  font-weight:600;
+}
+
+/* ================= DESTINATIONS ================= */
+
+.destination-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.destination{
+  position:relative;
+  min-height:340px;
+  overflow:hidden;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.1);
+  background:#102a39;
+  box-shadow:var(--shadow);
+}
+
+.destination img{
+  height:100%;
+  object-fit:cover;
+  transition:.55s;
+}
+
+.destination:hover img{
+  transform:scale(1.08);
+}
+
+.destination:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 30%,
+    rgba(3,13,20,.15) 45%,
+    rgba(3,13,20,.95) 100%
+  );
+}
+
+.destination-info{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  right:22px;
+  bottom:20px;
+}
+
+.destination-info small{
+  color:var(--gold2);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.destination-info h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:35px;
+  margin-top:3px;
+}
+
+.destination-info p{
+  color:#c8d0d4;
+  font-size:12px;
+  margin-top:3px;
+}
+
+/* ================= EXPERIENCES ================= */
+
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.experience{
+  position:relative;
+  min-height:275px;
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.experience img{
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.experience:hover img{
+  transform:scale(1.07);
+}
+
+.experience:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 25%,rgba(2,10,16,.9));
+}
+
+.experience-info{
+  position:absolute;
+  z-index:2;
+  left:19px;
+  right:19px;
+  bottom:18px;
+}
+
+.experience-info span{
+  display:inline-block;
+  font-size:10px;
+  color:var(--gold2);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.experience-info h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:29px;
+}
+
+/* ================= WHY US ================= */
+
+.why{
+  position:relative;
+  overflow:hidden;
+}
+
+.why-box{
+  border:1px solid rgba(216,173,85,.2);
+  border-radius:30px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(216,173,85,.09),
+      rgba(255,255,255,.025)
+    );
+  padding:55px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:55px;
+  align-items:center;
+}
+
+.why-image{
+  border-radius:23px;
+  overflow:hidden;
+  height:480px;
+  box-shadow:var(--shadow);
+}
+
+.why-image img{
+  height:100%;
+  object-fit:cover;
+}
+
+.why-list{
+  display:grid;
+  gap:19px;
+  margin:28px 0;
+}
+
+.why-item{
+  display:flex;
+  gap:15px;
+}
+
+.check{
+  flex:none;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#071521;
+  font-weight:900;
+  background:linear-gradient(135deg,#f3d995,#bc8934);
+}
+
+.why-item h4{
+  font-size:15px;
+  margin-bottom:3px;
+}
+
+.why-item p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:0;
+  padding:15px 25px;
+  border-radius:14px;
+  color:#071521;
+  font-weight:800;
+  background:linear-gradient(135deg,#f3d995,#bc8934);
+  box-shadow:0 12px 35px rgba(216,173,85,.2);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  max-width:1320px;
+  margin:0 auto 100px;
+  padding:0 24px;
+}
+
+.cta-box{
+  position:relative;
+  min-height:350px;
+  overflow:hidden;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  padding:55px;
+  background:
+    linear-gradient(90deg,rgba(3,14,22,.96),rgba(3,14,22,.55)),
+    url("https://images.unsplash.com/photo-1567623756898-bfae244aa56e?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1800");
+  background-size:cover;
+  background-position:center;
+  border:1px solid rgba(216,173,85,.28);
+}
+
+.cta-content{
+  max-width:650px;
+}
+
+.cta h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(40px,5vw,62px);
+  line-height:.95;
+}
+
+.cta p{
+  color:#d1d9dc;
+  margin:17px 0 25px;
+  line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  border-top:1px solid rgba(255,255,255,.08);
+  background:#04101a;
+  padding:55px 24px 110px;
+}
+
+.footer-inner{
+  max-width:1320px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:50px;
+}
+
+.footer-brand p{
+  color:var(--muted);
+  max-width:430px;
+  line-height:1.7;
+  margin-top:15px;
+}
+
+.footer h4{
+  color:var(--gold2);
+  margin-bottom:15px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:23px;
+}
+
+.footer a,
+.footer span{
+  display:block;
+  color:#aebbc2;
+  font-size:13px;
+  margin:9px 0;
+}
+
+.copyright{
+  max-width:1320px;
+  margin:45px auto 0;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.07);
+  color:#71808a;
+  font-size:11px;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav{
+  position:fixed;
+  z-index:1100;
+  bottom:12px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(94%,620px);
+  padding:8px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  background:rgba(3,14,22,.92);
+  border:1px solid rgba(216,173,85,.25);
+  border-radius:22px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.bottom-item{
+  border:0;
+  background:transparent;
+  color:#829099;
+  padding:8px 3px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  font-size:9px;
+}
+
+.bottom-item span:first-child{
+  font-size:18px;
+}
+
+.bottom-item.active{
+  color:var(--gold2);
+}
+
+/* ================= DRAWER ================= */
+
+.drawer-backdrop{
+  position:fixed;
+  z-index:1200;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+}
+
+.drawer{
+  position:fixed;
+  z-index:1300;
+  top:0;
+  right:-390px;
+  width:min(88%,370px);
+  height:100%;
+  background:#061520;
+  border-left:1px solid rgba(216,173,85,.2);
+  padding:100px 30px 30px;
+  transition:.35s ease;
+  box-shadow:-20px 0 70px rgba(0,0,0,.4);
+}
+
+.drawer.open{
+  right:0;
+}
+
+.drawer-backdrop.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.drawer-close{
+  position:absolute;
+  right:25px;
+  top:25px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  color:white;
+  font-size:20px;
+}
+
+.drawer nav{
+  display:grid;
+  gap:8px;
+}
+
+.drawer nav button{
+  border:0;
+  background:transparent;
+  color:#d9e0e3;
+  text-align:left;
+  padding:16px;
+  border-radius:12px;
+  font-size:15px;
+}
+
+.drawer nav button:hover{
+  background:rgba(216,173,85,.08);
+  color:var(--gold2);
+}
+
+.drawer-contact{
+  margin-top:30px;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:25px;
+  color:#8e9ca4;
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  z-index:1500;
+  inset:0;
+  display:none;
+  place-items:center;
+  background:rgba(0,0,0,.7);
+  padding:20px;
+}
+
+.modal.open{
+  display:grid;
+}
+
+.modal-box{
+  width:min(100%,500px);
+  background:#0a1e2c;
+  border:1px solid rgba(216,173,85,.3);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+
+.modal-box h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  color:var(--gold2);
+}
+
+.modal-box p{
+  color:var(--muted);
+  line-height:1.6;
+  margin:10px 0 22px;
+}
+
+.modal-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.modal-close{
+  border:1px solid rgba(255,255,255,.13);
+  color:#d5dde0;
+  background:transparent;
+  padding:13px 18px;
+  border-radius:12px;
+}
+
+/* ================= SEARCH RESULT ================= */
+
+.search-message{
+  display:none;
+  margin-top:18px;
+  padding:15px 18px;
+  border:1px solid rgba(216,173,85,.2);
+  background:rgba(216,173,85,.06);
+  border-radius:15px;
+  color:#d6dfe2;
+}
+
+.search-message.show{
+  display:block;
+}
+
+/* ================= RTL ================= */
+
+html[dir="rtl"]{
+  font-family:"DM Sans",sans-serif;
+}
+
+html[dir="rtl"] .hero-kicker:before{
+  display:none;
+}
+
+html[dir="rtl"] .hero-kicker:after{
+  content:"";
+  width:30px;
+  height:1px;
+  background:var(--gold);
+}
+
+html[dir="rtl"] .drawer{
+  right:auto;
+  left:-390px;
+  border-left:0;
+  border-right:1px solid rgba(216,173,85,.2);
+}
+
+html[dir="rtl"] .drawer.open{
+  left:0;
+}
+
+html[dir="rtl"] .drawer nav button{
+  text-align:right;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+  .header{
+    padding:10px 14px;
+  }
+
+  .brand-name{
+    font-size:25px;
+  }
+
+  .brand-tag{
+    font-size:6.5px;
+    letter-spacing:1.6px;
+  }
+
+  .logo-svg{
+    width:53px;
+  }
+
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-content{
+    padding:0 18px 85px;
+  }
+
+  .hero h1{
+    font-size:56px;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-search{
+    border-radius:15px;
+  }
+
+  .search-btn{
+    padding:12px 14px;
+    font-size:12px;
+  }
+
+  .section{
+    padding:70px 17px;
+  }
+
+  .service-grid,
+  .destination-grid,
+  .experience-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card{
+    min-height:265px;
+  }
+
+  .service-content{
+    min-height:265px;
+  }
+
+  .destination{
+    min-height:310px;
+  }
+
+  .experience{
+    min-height:250px;
+  }
+
+  .why-box{
+    grid-template-columns:1fr;
+    padding:20px;
+    gap:30px;
+  }
+
+  .why-image{
+    height:330px;
+  }
+
+  .cta{
+    padding:0 17px;
+    margin-bottom:70px;
+  }
+
+  .cta-box{
+    min-height:390px;
+    padding:30px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  footer{
+    padding-bottom:120px;
+  }
+}
+
+@media(min-width:851px){
+
+  .bottom-nav{
+    display:none;
+  }
+}
+
+@media(max-width:500px){
+
+  .header-actions{
+    gap:5px;
+  }
+
+  .lang-btn{
+    padding:6px 7px;
+    font-size:9px;
+  }
+
+  .menu-btn{
+    width:39px;
+    height:39px;
+  }
+
+  .hero{
+    min-height:690px;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero-search{
+    padding:5px;
+  }
+
+  .hero-search input{
+    padding:12px 2px;
+    font-size:12px;
+  }
+
+  .hero-search-icon{
+    padding-left:8px;
+  }
+
+  .search-btn{
+    padding:11px 12px;
+  }
+
+  .section-title{
+    font-size:43px;
+  }
+
+  .service-content h3{
+    font-size:31px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+  <div class="header-inner">
+
+    <a href="#home" class="brand">
+
+      <!-- PREMIUM INLINE LOGO -->
+      <svg class="logo-svg" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Sun -->
+        <circle cx="72" cy="26" r="17"
+                fill="none"
+                stroke="#E6C56E"
+                stroke-width="3"/>
+
+        <path d="M72 3v9M72 40v9M49 26h9M86 26h9"
+              stroke="#E6C56E"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+        <!-- Mountains -->
+        <path d="M8 75 L43 38 L60 57 L78 34 L119 75 Z"
+              fill="none"
+              stroke="#F0D48D"
+              stroke-width="4"
+              stroke-linejoin="round"/>
+
+        <path d="M20 75 L43 50 L55 62"
+              fill="none"
+              stroke="#C7953C"
+              stroke-width="3"/>
+
+        <!-- Palm -->
+        <path d="M111 75 C113 61 114 50 109 39"
+              fill="none"
+              stroke="#E3C270"
+              stroke-width="3"
+              stroke-linecap="round"/>
+
+        <path d="M110 43 C101 36 97 37 93 37
+                 M111 43 C116 34 122 32 128 34
+                 M110 45 C119 43 126 46 130 50
+                 M109 44 C106 35 108 29 113 25"
+              fill="none"
+              stroke="#E3C270"
+              stroke-width="3"
+              stroke-linecap="round"/>
+
+        <!-- Small plane -->
+        <path d="M42 23 L58 18 L51 27 L61 31 L58 34 L48 29 L40 35 L38 32 L44 26 Z"
+              fill="#F4D992"/>
+
+      </svg>
+
+      <div class="brand-text">
+        <div class="brand-name">Rihla Vibes</div>
+        <div class="brand-tag">Discover Morocco, Your Way</div>
+      </div>
+
+    </a>
+
+    <div class="header-actions">
+
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        ☰
+      </button>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- =========================================================
+     DRAWER
+========================================================= -->
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<aside class="drawer" id="drawer">
+
+  <button class="drawer-close" id="drawerClose">×</button>
+
+  <div class="eyebrow">Rihla Vibes</div>
+
+  <nav>
+    <button data-scroll="home">Accueil</button>
+    <button data-scroll="services">Nos services</button>
+    <button data-scroll="destinations">Destinations</button>
+    <button data-scroll="experiences">Expériences</button>
+    <button data-scroll="why">Pourquoi nous ?</button>
+    <button id="drawerReservation">Réserver maintenant</button>
+  </nav>
+
+  <div class="drawer-contact">
+    <strong style="color:#efd18a;">Rihla Vibes</strong><br>
+    Discover Morocco, Your Way<br><br>
+    🇲🇦 Maroc<br>
+    ✉ rihlavibes@gmail.com
+  </div>
+
+</aside>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main id="home">
+
+<section class="hero">
+
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-kicker" data-i18n="heroKicker">
+      Voyage • Découverte • Expérience
+    </div>
+
+    <h1>
+      <span data-i18n="heroTitle1">Le Maroc,</span>
+      <span data-i18n="heroTitle2">une destination infinie.</span>
+    </h1>
+
+    <p data-i18n="heroText">
+      Découvrez le Maroc autrement avec Rihla Vibes :
+      des riads authentiques, des circuits sur mesure,
+      des expériences locales et des moments inoubliables.
+    </p>
+
+    <div class="hero-search">
+
+      <span class="hero-search-icon">⌕</span>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Rechercher une destination ou une expérience..."
+        data-i18n-placeholder="searchPlaceholder"
+      >
+
+      <button class="search-btn" id="searchBtn" data-i18n="search">
+        Rechercher
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK SERVICES
+========================================================= -->
+
+<section class="section" style="padding-bottom:35px;">
+
+  <div class="quick-services">
+
+    <div class="quick">
+      <div class="quick-icon">🏨</div>
+      <span data-i18n="hotel">Hôtels & Riads</span>
+    </div>
+
+    <div class="quick">
+      <div class="quick-icon">🚌</div>
+      <span data-i18n="transport">Transport</span>
+    </div>
+
+    <div class="quick">
+      <div class="quick-icon">🍽</div>
+      <span data-i18n="restaurant">Restaurants</span>
+    </div>
+
+    <div class="quick">
+      <div class="quick-icon">🧭</div>
+      <span data-i18n="circuits">Circuits</span>
+    </div>
+
+    <div class="quick">
+      <div class="quick-icon">🎉</div>
+      <span data-i18n="events">Événements</span>
+    </div>
+
+    <div class="quick">
+      <div class="quick-icon">🏄</div>
+      <span data-i18n="activities">Activités</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="section services" id="services">
+
+  <div class="section-head">
+
+    <div class="eyebrow" data-i18n="servicesEyebrow">
+      Tout pour votre voyage
+    </div>
+
+    <h2 class="section-title" data-i18n="servicesTitle">
+      Nos services
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p class="section-subtitle" data-i18n="servicesSubtitle">
+      Une seule adresse pour organiser votre expérience au Maroc,
+      de votre arrivée jusqu'à votre dernière journée.
+    </p>
+
+  </div>
+
+
+  <div class="service-grid">
+
+    <!-- HOTEL -->
+
+    <article class="service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=88"
+        alt="Hôtel et riad au Maroc"
+        loading="lazy"
+      >
+
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+
+        <div class="service-icon">🏨</div>
+
+        <h3 data-i18n="serviceHotelTitle">
+          Hôtels & Riads
+        </h3>
+
+        <p data-i18n="serviceHotelText">
+          Séjours authentiques, riads de charme et hôtels
+          soigneusement sélectionnés.
+        </p>
+
+        <span class="service-link" data-i18n="discover">
+          Découvrir →
+        </span>
+
+      </div>
+    </article>
+
+
+    <!-- TRANSPORT -->
+
+    <article class="service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1400&q=88"
+        alt="Transport touristique"
+        loading="lazy"
+      >
+
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+
+        <div class="service-icon">🚌</div>
+
+        <h3 data-i18n="serviceTransportTitle">
+          Transport
+        </h3>
+
+        <p data-i18n="serviceTransportText">
+          Déplacements confortables, transferts et transport
+          touristique pour explorer le Maroc sereinement.
+        </p>
+
+        <span class="service-link" data-i18n="discover">
+          Découvrir →
+        </span>
+
+      </div>
+    </article>
+
+
+    <!-- RESTAURANT -->
+
+    <article class="service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=88"
+        alt="Restaurant et gastronomie"
+        loading="lazy"
+      >
+
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+
+        <div class="service-icon">🍽</div>
+
+        <h3 data-i18n="serviceRestaurantTitle">
+          Restaurants
+        </h3>
+
+        <p data-i18n="serviceRestaurantText">
+          Tables marocaines, adresses gourmandes et expériences
+          culinaires à travers le Royaume.
+        </p>
+
+        <span class="service-link" data-i18n="discover">
+          Découvrir →
+        </span>
+
+      </div>
+    </article>
+
+
+    <!-- CIRCUITS -->
+
+    <article class="service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=88"
+        alt="Circuit touristique au Maroc"
+        loading="lazy"
+      >
+
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+
+        <div class="service-icon">🧭</div>
+
+        <h3 data-i18n="serviceCircuitTitle">
+          Circuits & Voyages
+        </h3>
+
+        <p data-i18n="serviceCircuitText">
+          Des itinéraires pensés pour découvrir les villes,
+          montagnes, déserts et côtes du Maroc.
+        </p>
+
+        <span class="service-link" data-i18n="discover">
+          Découvrir →
+        </span>
+
+      </div>
+    </article>
+
+
+    <!-- EVENTS -->
+
+    <article class="service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=88"
+        alt="Événement et festivités"
+        loading="lazy"
+      >
+
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+
+        <div class="service-icon">🎉</div>
+
+        <h3 data-i18n="serviceEventTitle">
+          Événements & Activités
+        </h3>
+
+        <p data-i18n="serviceEventText">
+          Activités, sorties, événements culturels et moments
+          uniques à vivre pendant votre séjour.
+        </p>
+
+        <span class="service-link" data-i18n="discover">
+          Découvrir →
+        </span>
+
+      </div>
+    </article>
+
+
+    <!-- NATURE -->
+
+    <article class="service-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=88"
+        alt="Montagnes et nature"
+        loading="lazy"
+      >
+
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+
+        <div class="service-icon">⛰</div>
+
+        <h3 data-i18n="serviceNatureTitle">
+          Nature & Montagne
+        </h3>
+
+        <p data-i18n="serviceNatureText">
+          Randonnées, montagnes, paysages naturels et aventures
+          hors des sentiers battus.
+        </p>
+
+        <span class="service-link" data-i18n="discover">
+          Découvrir →
+        </span>
+
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DESTINATIONS
+========================================================= -->
+
+<section class="section" id="destinations">
+
+  <div class="section-head">
+
+    <div class="eyebrow" data-i18n="destEyebrow">
+      Le Royaume vous attend
+    </div>
+
+    <h2 class="section-title" data-i18n="destTitle">
+      Destinations populaires
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p class="section-subtitle" data-i18n="destSubtitle">
+      Des médinas historiques aux plages de l'Atlantique,
+      découvrez les visages les plus fascinants du Maroc.
+    </p>
+
+  </div>
+
+
+  <div class="destination-grid discover-grid">
+
+    <!-- MARRAKECH -->
+
+    <article class="destination discover-card"
+             data-search="marrakech marrakesh medina koutoubia ville rouge">
+
+      <img
+        src="https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=90&w=1600"
+        alt="Marrakech Koutoubia"
+        loading="lazy"
+      >
+
+      <div class="destination-info">
+
+        <small>Maroc</small>
+
+        <h3>Marrakech</h3>
+
+        <p data-i18n="marrakechDesc">
+          La ville rouge, entre tradition et élégance.
+        </p>
+
+      </div>
+    </article>
+
+
+    <!-- CHEFCHAOUEN -->
+
+    <article class="destination discover-card"
+             data-search="chefchaouen blue city montagne medina">
+
+      <img
+        src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1400&q=88"
+        alt="Chefchaouen Maroc"
+        loading="lazy"
+      >
+
+      <div class="destination-info">
+
+        <small>Nord du Maroc</small>
+
+        <h3>Chefchaouen</h3>
+
+        <p data-i18n="chefDesc">
+          La perle bleue des montagnes du Rif.
+        </p>
+
+      </div>
+    </article>
+
+
+    <!-- FES -->
+
+    <article class="destination discover-card"
+             data-search="fes fez fès medina artisanat culture">
+
+      <img
+        src="https://images.unsplash.com/photo-1577147443647-81856d5151af?auto=format&fit=crop&w=1400&q=88"
+        alt="Fès Maroc"
+        loading="lazy"
+      >
+
+      <div class="destination-info">
+
+        <small>Culture</small>
+
+        <h3>Fès</h3>
+
+        <p data-i18n="fesDesc">
+          Une médina vivante au cœur de l'histoire marocaine.
+        </p>
+
+      </div>
+    </article>
+
+
+    <!-- CASABLANCA -->
+
+    <article class="destination discover-card"
+             data-search="casablanca casa mosquée hassan ii ocean ville">
+
+      <img
+        src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1400&q=88"
+        alt="Casablanca Maroc"
+        loading="lazy"
+      >
+
+      <div class="destination-info">
+
+        <small>Atlantique</small>
+
+        <h3>Casablanca</h3>
+
+        <p data-i18n="casaDesc">
+          Modernité, océan et architecture emblématique.
+        </p>
+
+      </div>
+    </article>
+
+
+    <!-- AGADIR -->
+
+    <article class="destination discover-card"
+             data-search="agadir plage surf atlantic beach">
+
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=88"
+        alt="Agadir plage Maroc"
+        loading="lazy"
+      >
+
+      <div class="destination-info">
+
+        <small>Océan Atlantique</small>
+
+        <h3>Agadir</h3>
+
+        <p data-i18n="agadirDesc">
+          Soleil, plages et douceur de vivre.
+        </p>
+
+      </div>
+    </article>
+
+
+    <!-- MERZOUGA -->
+
+    <article class="destination discover-card"
+             data-search="merzouga desert sahara dunes camel">
+
+      <img
+        src="https://images.unsplash.com/photo-1567623756898-bfae244aa56e?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1600"
+        alt="Merzouga désert Maroc"
+        loading="lazy"
+      >
+
+      <div class="destination-info">
+
+        <small>Sahara</small>
+
+        <h3>Merzouga</h3>
+
+        <p data-i18n="merzougaDesc">
+          Les dunes dorées et la magie du Sahara.
+        </p>
+
+      </div>
+    </article>
+
+  </div>
+
+  <div class="search-message" id="searchMessage">
+    <span id="searchMessageText"></span>
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCES
+========================================================= -->
+
+<section class="section" id="experiences">
+
+  <div class="section-head">
+
+    <div class="eyebrow" data-i18n="expEyebrow">
+      À vivre au Maroc
+    </div>
+
+    <h2 class="section-title" data-i18n="expTitle">
+      Expériences à vivre
+    </h2>
+
+    <div class="gold-line"></div>
+
+  </div>
+
+
+  <div class="experience-grid">
+
+    <article class="experience discover-card"
+             data-search="culture artisanat medina souk maroc">
+
+      <img
+        src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1400&q=88"
+        alt="Culture et artisanat marocain"
+        loading="lazy"
+      >
+
+      <div class="experience-info">
+        <span>Culture</span>
+        <h3 data-i18n="expCulture">Culture & Artisanat</h3>
+      </div>
+
+    </article>
+
+
+    <article class="experience discover-card"
+             data-search="randonnée nature montagne atlas hiking">
+
+      <img
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=88"
+        alt="Randonnée montagne"
+        loading="lazy"
+      >
+
+      <div class="experience-info">
+        <span>Nature</span>
+        <h3 data-i18n="expNature">Randonnée & Nature</h3>
+      </div>
+
+    </article>
+
+
+    <article class="experience discover-card"
+             data-search="surf taghazout ocean beach">
+
+      <img
+        src="https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1600"
+        alt="Surf à Taghazout"
+        loading="lazy"
+      >
+
+      <div class="experience-info">
+        <span>Atlantique</span>
+        <h3 data-i18n="expSurf">Surf à Taghazout</h3>
+      </div>
+
+    </article>
+
+
+    <article class="experience discover-card"
+             data-search="merzouga dunes desert camel sahara">
+
+      <img
+        src="https://images.unsplash.com/photo-1567623756898-bfae244aa56e?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1600"
+        alt="Dunes de Merzouga"
+        loading="lazy"
+      >
+
+      <div class="experience-info">
+        <span>Sahara</span>
+        <h3 data-i18n="expDesert">Dunes de Merzouga</h3>
+      </div>
+
+    </article>
+
+
+    <article class="experience discover-card"
+             data-search="gastronomie food couscous tajine restaurant">
+
+      <img
+        src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1400&q=88"
+        alt="Gastronomie marocaine"
+        loading="lazy"
+      >
+
+      <div class="experience-info">
+        <span>Saveurs</span>
+        <h3 data-i18n="expFood">Gastronomie</h3>
+      </div>
+
+    </article>
+
+
+    <article class="experience discover-card"
+             data-search="evenement festival fête maroc culture">
+
+      <img
+        src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=88"
+        alt="Événements au Maroc"
+        loading="lazy"
+      >
+
+      <div class="experience-info">
+        <span>Festivités</span>
+        <h3 data-i18n="expEvents">Événements & Festivités</h3>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY RIHLAVIBES
+========================================================= -->
+
+<section class="section why" id="why">
+
+  <div class="why-box">
+
+    <div class="why-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=90&w=1800"
+        alt="Découvrir le Maroc avec Rihla Vibes"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div>
+
+      <div class="eyebrow" data-i18n="whyEyebrow">
+        L'esprit Rihla Vibes
+      </div>
+
+      <h2 class="section-title" data-i18n="whyTitle">
+        Pourquoi choisir Rihla Vibes ?
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <div class="why-list">
+
+        <div class="why-item">
+
+          <div class="check">✓</div>
+
+          <div>
+            <h4 data-i18n="why1Title">
+              Une expérience pensée pour vous
+            </h4>
+
+            <p data-i18n="why1Text">
+              Nous vous aidons à construire un séjour adapté
+              à vos envies et à votre rythme.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="why-item">
+
+          <div class="check">✓</div>
+
+          <div>
+            <h4 data-i18n="why2Title">
+              Le Maroc dans toute sa diversité
+            </h4>
+
+            <p data-i18n="why2Text">
+              Villes, montagnes, désert, océan, culture,
+              gastronomie et activités.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="why-item">
+
+          <div class="check">✓</div>
+
+          <div>
+            <h4 data-i18n="why3Title">
+              Une approche simple et moderne
+            </h4>
+
+            <p data-i18n="why3Text">
+              Un seul espace pour découvrir, organiser et
+              préparer votre voyage au Maroc.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <button class="primary-btn" id="reserveBtn">
+        <span data-i18n="reserve">Réserver maintenant</span>
+        →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+  <div class="cta-box">
+
+    <div class="cta-content">
+
+      <div class="eyebrow" data-i18n="ctaEyebrow">
+        Votre prochaine aventure
+      </div>
+
+      <h2 data-i18n="ctaTitle">
+        Le Maroc vous attend.
+      </h2>
+
+      <p data-i18n="ctaText">
+        Commencez à imaginer votre prochaine expérience
+        avec Rihla Vibes.
+      </p>
+
+      <button class="primary-btn" id="ctaReserve">
+        <span data-i18n="reserve">Réserver maintenant</span>
+        →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <div class="brand-name">
+        Rihla Vibes
+      </div>
+
+      <p data-i18n="footerText">
+        Discover Morocco, Your Way.
+        Une nouvelle façon de découvrir le Maroc,
+        entre authenticité, confort et expériences.
+      </p>
+
+    </div>
+
+
+    <div class="footer">
+
+      <h4 data-i18n="footerExplore">
+        Explorer
+      </h4>
+
+      <a href="#services" data-i18n="servicesTitle">
+        Nos services
+      </a>
+
+      <a href="#destinations" data-i18n="destTitle">
+        Destinations
+      </a>
+
+      <a href="#experiences" data-i18n="expTitle">
+        Expériences
+      </a>
+
+    </div>
+
+
+    <div class="footer">
+
+      <h4 data-i18n="contact">
+        Contact
+      </h4>
+
+      <a href="mailto:rihlavibes@gmail.com">
+        ✉ rihlavibes@gmail.com
+      </a>
+
+      <span>🇲🇦 Maroc</span>
+
+      <span data-i18n="footerContact">
+        Votre voyage commence ici.
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+    © 2026 Rihla Vibes — Discover Morocco, Your Way.
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BOTTOM MOBILE NAV
+========================================================= -->
+
+<nav class="bottom-nav">
+
+  <button class="bottom-item active" data-scroll="home">
+    <span>⌂</span>
+    <span data-i18n="navHome">Accueil</span>
+  </button>
+
+  <button class="bottom-item" data-scroll="destinations">
+    <span>⌕</span>
+    <span data-i18n="navSearch">Recherche</span>
+  </button>
+
+  <button class="bottom-item" id="favoriteNav">
+    <span>♡</span>
+    <span data-i18n="navFavorites">Favoris</span>
+  </button>
+
+  <button class="bottom-item" id="bookingNav">
+    <span>▣</span>
+    <span data-i18n="navBookings">Réservations</span>
+  </button>
+
+  <button class="bottom-item" id="profileNav">
+    <span>♙</span>
+    <span data-i18n="navProfile">Profil</span>
+  </button>
+
+</nav>
+
+
+<!-- =========================================================
+     RESERVATION MODAL
+========================================================= -->
+
+<div class="modal" id="reservationModal">
+
+  <div class="modal-box">
+
+    <div class="eyebrow">Rihla Vibes</div>
+
+    <h3 data-i18n="modalTitle">
+      Préparez votre voyage
+    </h3>
+
+    <p data-i18n="modalText">
+      Contactez-nous pour organiser votre séjour,
+      votre circuit, votre transport, votre hébergement
+      ou vos activités au Maroc.
+    </p>
+
+    <div class="modal-actions">
+
+      <a
+        class="primary-btn"
+        href="mailto:rihlavibes@gmail.com?subject=Demande%20de%20réservation%20Rihla%20Vibes"
+      >
+        ✉ <span data-i18n="emailUs">Nous contacter</span>
+      </a>
+
+      <button class="modal-close" id="modalClose" data-i18n="close">
+        Fermer
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   TRANSLATIONS
+========================================================= */
+
+const translations = {
+
+fr: {
+
+heroKicker:"Voyage • Découverte • Expérience",
+
+heroTitle1:"Le Maroc,",
+
+heroTitle2:"une destination infinie.",
+
+heroText:
+"Découvrez le Maroc autrement avec Rihla Vibes : des riads authentiques, des circuits sur mesure, des expériences locales et des moments inoubliables.",
+
+searchPlaceholder:
+"Rechercher une destination ou une expérience...",
+
+search:"Rechercher",
+
+hotel:"Hôtels & Riads",
+
+transport:"Transport",
+
+restaurant:"Restaurants",
+
+circuits:"Circuits",
+
+events:"Événements",
+
+activities:"Activités",
+
+servicesEyebrow:"Tout pour votre voyage",
+
+servicesTitle:"Nos services",
+
+servicesSubtitle:
+"Une seule adresse pour organiser votre expérience au Maroc, de votre arrivée jusqu'à votre dernière journée.",
+
+serviceHotelTitle:"Hôtels & Riads",
+
+serviceHotelText:
+"Séjours authentiques, riads de charme et hôtels soigneusement sélectionnés.",
+
+serviceTransportTitle:"Transport",
+
+serviceTransportText:
+"Déplacements confortables, transferts et transport touristique pour explorer le Maroc sereinement.",
+
+serviceRestaurantTitle:"Restaurants",
+
+serviceRestaurantText:
+"Tables marocaines, adresses gourmandes et expériences culinaires à travers le Royaume.",
+
+serviceCircuitTitle:"Circuits & Voyages",
+
+serviceCircuitText:
+"Des itinéraires pensés pour découvrir les villes, montagnes, déserts et côtes du Maroc.",
+
+serviceEventTitle:"Événements & Activités",
+
+serviceEventText:
+"Activités, sorties, événements culturels et moments uniques à vivre pendant votre séjour.",
+
+serviceNatureTitle:"Nature & Montagne",
+
+serviceNatureText:
+"Randonnées, montagnes, paysages naturels et aventures hors des sentiers battus.",
+
+discover:"Découvrir →",
+
+destEyebrow:"Le Royaume vous attend",
+
+destTitle:"Destinations populaires",
+
+destSubtitle:
+"Des médinas historiques aux plages de l'Atlantique, découvrez les visages les plus fascinants du Maroc.",
+
+marrakechDesc:"La ville rouge, entre tradition et élégance.",
+
+chefDesc:"La perle bleue des montagnes du Rif.",
+
+fesDesc:"Une médina vivante au cœur de l'histoire marocaine.",
+
+casaDesc:"Modernité, océan et architecture emblématique.",
+
+agadirDesc:"Soleil, plages et douceur de vivre.",
+
+merzougaDesc:"Les dunes dorées et la magie du Sahara.",
+
+expEyebrow:"À vivre au Maroc",
+
+expTitle:"Expériences à vivre",
+
+expCulture:"Culture & Artisanat",
+
+expNature:"Randonnée & Nature",
+
+expSurf:"Surf à Taghazout",
+
+expDesert:"Dunes de Merzouga",
+
+expFood:"Gastronomie",
+
+expEvents:"Événements & Festivités",
+
+whyEyebrow:"L'esprit Rihla Vibes",
+
+whyTitle:"Pourquoi choisir Rihla Vibes ?",
+
+why1Title:"Une expérience pensée pour vous",
+
+why1Text:
+"Nous vous aidons à construire un séjour adapté à vos envies et à votre rythme.",
+
+why2Title:"Le Maroc dans toute sa diversité",
+
+why2Text:
+"Villes, montagnes, désert, océan, culture, gastronomie et activités.",
+
+why3Title:"Une approche simple et moderne",
+
+why3Text:
+"Un seul espace pour découvrir, organiser et préparer votre voyage au Maroc.",
+
+reserve:"Réserver maintenant",
+
+ctaEyebrow:"Votre prochaine aventure",
+
+ctaTitle:"Le Maroc vous attend.",
+
+ctaText:
+"Commencez à imaginer votre prochaine expérience avec Rihla Vibes.",
+
+footerText:
+"Discover Morocco, Your Way. Une nouvelle façon de découvrir le Maroc, entre authenticité, confort et expériences.",
+
+footerExplore:"Explorer",
+
+contact:"Contact",
+
+footerContact:"Votre voyage commence ici.",
+
+navHome:"Accueil",
+
+navSearch:"Recherche",
+
+navFavorites:"Favoris",
+
+navBookings:"Réservations",
+
+navProfile:"Profil",
+
+modalTitle:"Préparez votre voyage",
+
+modalText:
+"Contactez-nous pour organiser votre séjour, votre circuit, votre transport, votre hébergement ou vos activités au Maroc.",
+
+emailUs:"Nous contacter",
+
+close:"Fermer",
+
+searchFound:"résultat(s) trouvé(s).",
+
+searchNone:"Aucun résultat trouvé."
+
+},
+
+
+ar: {
+
+heroKicker:"سفر • اكتشاف • تجربة",
+
+heroTitle1:"المغرب،",
+
+heroTitle2:"وجهة بلا حدود.",
+
+heroText:
+"اكتشف المغرب بطريقة مختلفة مع Rihla Vibes: رياض أصيلة، جولات مميزة، تجارب محلية ولحظات لا تنسى.",
+
+searchPlaceholder:
+"ابحث عن مدينة أو تجربة...",
+
+search:"بحث",
+
+hotel:"الفنادق والرياض",
+
+transport:"النقل",
+
+restaurant:"المطاعم",
+
+circuits:"الجولات",
+
+events:"الفعاليات",
+
+activities:"الأنشطة",
+
+servicesEyebrow:"كل ما تحتاجه لرحلتك",
+
+servicesTitle:"خدماتنا",
+
+servicesSubtitle:
+"كل ما تحتاجه لتنظيم تجربتك في المغرب، من الوصول إلى آخر يوم في رحلتك.",
+
+serviceHotelTitle:"الفنادق والرياض",
+
+serviceHotelText:
+"إقامات أصيلة ورياضات مميزة وفنادق مختارة بعناية.",
+
+serviceTransportTitle:"النقل",
+
+serviceTransportText:
+"نقل مريح، استقبال من المطار وخدمات نقل سياحية لاستكشاف المغرب بسهولة.",
+
+serviceRestaurantTitle:"المطاعم",
+
+serviceRestaurantText:
+"المطبخ المغربي، مطاعم مميزة وتجارب غذائية في مختلف أنحاء المملكة.",
+
+serviceCircuitTitle:"الجولات والرحلات",
+
+serviceCircuitText:
+"مسارات مصممة لاكتشاف المدن والجبال والصحراء والسواحل المغربية.",
+
+serviceEventTitle:"الفعاليات والأنشطة",
+
+serviceEventText:
+"أنشطة، نزهات، فعاليات ثقافية ولحظات مميزة خلال إقامتك.",
+
+serviceNatureTitle:"الطبيعة والجبال",
+
+serviceNatureText:
+"رحلات المشي، الجبال، الطبيعة والمغامرات بعيدا عن الطرق التقليدية.",
+
+discover:"اكتشف ←",
+
+destEyebrow:"المملكة في انتظارك",
+
+destTitle:"وجهات شهيرة",
+
+destSubtitle:
+"من المدن العتيقة إلى شواطئ الأطلسي، اكتشف أجمل وجوه المغرب.",
+
+marrakechDesc:"المدينة الحمراء بين الأصالة والأناقة.",
+
+chefDesc:"جوهرة زرقاء في جبال الريف.",
+
+fesDesc:"مدينة عريقة نابضة بالحياة في قلب التاريخ المغربي.",
+
+casaDesc:"العصرية، المحيط والهندسة المعمارية المميزة.",
+
+agadirDesc:"الشمس والشواطئ ومتعة الحياة.",
+
+merzougaDesc:"الكثبان الذهبية وسحر الصحراء.",
+
+expEyebrow:"تجارب تعيشها في المغرب",
+
+expTitle:"تجارب لا تنسى",
+
+expCulture:"الثقافة والصناعة التقليدية",
+
+expNature:"المشي والطبيعة",
+
+expSurf:"ركوب الأمواج في تغازوت",
+
+expDesert:"كثبان مرزوكة",
+
+expFood:"المطبخ المغربي",
+
+expEvents:"الفعاليات والمهرجانات",
+
+whyEyebrow:"روح Rihla Vibes",
+
+whyTitle:"لماذا Rihla Vibes؟",
+
+why1Title:"تجربة مصممة من أجلك",
+
+why1Text:
+"نساعدك على بناء رحلة تناسب رغباتك وإيقاعك.",
+
+why2Title:"المغرب بكل تنوعه",
+
+why2Text:
+"المدن، الجبال، الصحراء، المحيط، الثقافة، المطبخ والأنشطة.",
+
+why3Title:"طريقة بسيطة وعصرية",
+
+why3Text:
+"مساحة واحدة لاكتشاف وتنظيم وتحضير رحلتك في المغرب.",
+
+reserve:"احجز الآن",
+
+ctaEyebrow:"مغامرتك القادمة",
+
+ctaTitle:"المغرب ينتظرك.",
+
+ctaText:
+"ابدأ في تخيل تجربتك القادمة مع Rihla Vibes.",
+
+footerText:
+"Discover Morocco, Your Way. طريقة جديدة لاكتشاف المغرب بين الأصالة والراحة والتجارب.",
+
+footerExplore:"استكشف",
+
+contact:"تواصل معنا",
+
+footerContact:"رحلتك تبدأ من هنا.",
+
+navHome:"الرئيسية",
+
+navSearch:"بحث",
+
+navFavorites:"المفضلة",
+
+navBookings:"الحجوزات",
+
+navProfile:"الملف",
+
+modalTitle:"حضّر رحلتك",
+
+modalText:
+"تواصل معنا لتنظيم إقامتك أو جولتك أو النقل أو الإقامة أو الأنشطة في المغرب.",
+
+emailUs:"تواصل معنا",
+
+close:"إغلاق"
+
+},
+
+
+en: {
+
+heroKicker:"Travel • Discover • Experience",
+
+heroTitle1:"Morocco,",
+
+heroTitle2:"an endless destination.",
+
+heroText:
+"Discover Morocco differently with Rihla Vibes: authentic riads, tailor-made tours, local experiences and unforgettable moments.",
+
+searchPlaceholder:
+"Search for a destination or experience...",
+
+search:"Search",
+
+hotel:"Hotels & Riads",
+
+transport:"Transport",
+
+restaurant:"Restaurants",
+
+circuits:"Tours",
+
+events:"Events",
+
+activities:"Activities",
+
+servicesEyebrow:"Everything for your trip",
+
+servicesTitle:"Our services",
+
+servicesSubtitle:
+"One place to organize your Morocco experience, from arrival to your final day.",
+
+serviceHotelTitle:"Hotels & Riads",
+
+serviceHotelText:
+"Authentic stays, charming riads and carefully selected hotels.",
+
+serviceTransportTitle:"Transport",
+
+serviceTransportText:
+"Comfortable transfers and tourist transport to explore Morocco with ease.",
+
+serviceRestaurantTitle:"Restaurants",
+
+serviceRestaurantText:
+"Moroccan cuisine, great restaurants and culinary experiences across the Kingdom.",
+
+serviceCircuitTitle:"Tours & Trips",
+
+serviceCircuitText:
+"Routes designed to discover Morocco's cities, mountains, deserts and coastline.",
+
+serviceEventTitle:"Events & Activities",
+
+serviceEventText:
+"Activities, outings, cultural events and memorable moments during your stay.",
+
+serviceNatureTitle:"Nature & Mountains",
+
+serviceNatureText:
+"Hiking, mountains, natural landscapes and adventures away from the usual paths.",
+
+discover:"Discover →",
+
+destEyebrow:"The Kingdom awaits",
+
+destTitle:"Popular destinations",
+
+destSubtitle:
+"From historic medinas to Atlantic beaches, discover the many faces of Morocco.",
+
+marrakechDesc:"The Red City, where tradition meets elegance.",
+
+chefDesc:"The blue pearl of the Rif Mountains.",
+
+fesDesc:"A living medina at the heart of Moroccan history.",
+
+casaDesc:"Modernity, ocean and iconic architecture.",
+
+agadirDesc:"Sun, beaches and a relaxed lifestyle.",
+
+merzougaDesc:"Golden dunes and the magic of the Sahara.",
+
+expEyebrow:"Experience Morocco",
+
+expTitle:"Experiences to live",
+
+expCulture:"Culture & Craft",
+
+expNature:"Hiking & Nature",
+
+expSurf:"Surfing in Taghazout",
+
+expDesert:"Merzouga Dunes",
+
+expFood:"Gastronomy",
+
+expEvents:"Events & Festivals",
+
+whyEyebrow:"The Rihla Vibes spirit",
+
+whyTitle:"Why Rihla Vibes?",
+
+why1Title:"An experience designed for you",
+
+why1Text:
+"We help you build a stay adapted to your wishes and your pace.",
+
+why2Title:"Morocco in all its diversity",
+
+why2Text:
+"Cities, mountains, desert, ocean, culture, gastronomy and activities.",
+
+why3Title:"Simple and modern",
+
+why3Text:
+"One space to discover, organize and prepare your Morocco journey.",
+
+reserve:"Book now",
+
+ctaEyebrow:"Your next adventure",
+
+ctaTitle:"Morocco is waiting.",
+
+ctaText:
+"Start imagining your next experience with Rihla Vibes.",
+
+footerText:
+"Discover Morocco, Your Way. A new way to discover Morocco through authenticity, comfort and experiences.",
+
+footerExplore:"Explore",
+
+contact:"Contact",
+
+footerContact:"Your journey starts here.",
+
+navHome:"Home",
+
+navSearch:"Search",
+
+navFavorites:"Favorites",
+
+navBookings:"Bookings",
+
+navProfile:"Profile",
+
+modalTitle:"Plan your journey",
+
+modalText:
+"Contact us to organize your stay, tour, transport, accommodation or activities in Morocco.",
+
+emailUs:"Contact us",
+
+close:"Close"
+
+}
+
+};
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+let currentLang =
+localStorage.getItem("rihlaLanguage") || "fr";
+
+
+function applyLanguage(lang){
+
+  currentLang = lang;
+
+  localStorage.setItem("rihlaLanguage",lang);
+
+  const dict = translations[lang];
+
+  document.documentElement.lang = lang;
+
+  document.documentElement.dir =
+    lang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+    const key = el.dataset.i18n;
+
+    if(dict[key]){
+      el.textContent = dict[key];
+    }
+
+  });
+
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+
+    const key = el.dataset.i18nPlaceholder;
+
+    if(dict[key]){
+      el.placeholder = dict[key];
+    }
+
+  });
+
+
+  document.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.classList.toggle(
+      "active",
+      btn.dataset.lang === lang
+    );
+  });
+
+}
+
+
+document.querySelectorAll(".lang-btn").forEach(btn=>{
+
+  btn.addEventListener("click",()=>{
+
+    applyLanguage(btn.dataset.lang);
+
+  });
+
+});
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const drawer =
+document.getElementById("drawer");
+
+const drawerBackdrop =
+document.getElementById("drawerBackdrop");
+
+const drawerClose =
+document.getElementById("drawerClose");
+
+
+function openDrawer(){
+
+  drawer.classList.add("open");
+
+  drawerBackdrop.classList.add("open");
+
+}
+
+
+function closeDrawer(){
+
+  drawer.classList.remove("open");
+
+  drawerBackdrop.classList.remove("open");
+
+}
+
+
+menuBtn.addEventListener("click",openDrawer);
+
+drawerClose.addEventListener("click",closeDrawer);
+
+drawerBackdrop.addEventListener("click",closeDrawer);
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+document.querySelectorAll("[data-scroll]").forEach(btn=>{
+
+  btn.addEventListener("click",()=>{
+
+    const id = btn.dataset.scroll;
+
+    const target =
+      document.getElementById(id);
+
+    if(target){
+
+      target.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+    }
+
+    closeDrawer();
+
+  });
+
+});
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+const searchInput =
+document.getElementById("searchInput");
+
+const searchBtn =
+document.getElementById("searchBtn");
+
+const cards =
+document.querySelectorAll(".discover-card");
+
+const searchMessage =
+document.getElementById("searchMessage");
+
+const searchMessageText =
+document.getElementById("searchMessageText");
+
+
+function doSearch(){
+
+  const query =
+    searchInput.value.trim().toLowerCase();
+
+  if(!query){
+
+    cards.forEach(card=>{
+      card.style.display="";
+    });
+
+    searchMessage.classList.remove("show");
+
+    return;
+
+  }
+
+  let count = 0;
+
+  cards.forEach(card=>{
+
+    const text =
+      card.dataset.search.toLowerCase();
+
+    const visible =
+      text.includes(query);
+
+    card.style.display =
+      visible ? "" : "none";
+
+    if(visible) count++;
+
+  });
+
+
+  const dict =
+    translations[currentLang];
+
+  if(count > 0){
+
+    searchMessageText.textContent =
+      count + " " + dict.searchFound;
+
+  }else{
+
+    searchMessageText.textContent =
+      dict.searchNone;
+
+  }
+
+  searchMessage.classList.add("show");
+
+  document.getElementById("destinations")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+}
+
+
+searchBtn.addEventListener("click",doSearch);
+
+searchInput.addEventListener("keydown",e=>{
+
+  if(e.key==="Enter"){
+    doSearch();
+  }
+
+});
+
+
+/* =========================================================
+   RESERVATION MODAL
+========================================================= */
+
+const modal =
+document.getElementById("reservationModal");
+
+const modalClose =
+document.getElementById("modalClose");
+
+
+function openReservation(){
+
+  modal.classList.add("open");
+
+}
+
+
+function closeReservation(){
+
+  modal.classList.remove("open");
+
+}
+
+
+document.getElementById("reserveBtn")
+  .addEventListener("click",openReservation);
+
+document.getElementById("ctaReserve")
+  .addEventListener("click",openReservation);
+
+document.getElementById("drawerReservation")
+  .addEventListener("click",()=>{
+    closeDrawer();
+    openReservation();
+  });
+
+modalClose.addEventListener("click",closeReservation);
+
+modal.addEventListener("click",e=>{
+
+  if(e.target===modal){
+    closeReservation();
+  }
+
+});
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+document.getElementById("favoriteNav")
+  .addEventListener("click",()=>{
+
+    const dict =
+      translations[currentLang];
+
+    alert(
+      currentLang==="ar"
+      ? "سيتم إضافة المفضلة قريباً."
+      : currentLang==="en"
+      ? "Favorites will be available soon."
+      : "La fonction favoris sera bientôt disponible."
+    );
+
+  });
+
+
+document.getElementById("bookingNav")
+  .addEventListener("click",openReservation);
+
+
+document.getElementById("profileNav")
+  .addEventListener("click",()=>{
+
+    alert(
+      currentLang==="ar"
+      ? "الملف الشخصي سيكون متاحاً قريباً."
+      : currentLang==="en"
+      ? "Your profile will be available soon."
+      : "Votre profil sera bientôt disponible."
+    );
+
+  });
+
+
+/* =========================================================
+   INITIAL LANGUAGE
+========================================================= */
+
+applyLanguage(currentLang);
+
+
+/* =========================================================
+   IMAGE FALLBACK
+   إذا صورة خارجية ما تحملاتش، نخلي البطاقة
+   بشكل أنيق بدل ما تبان فارغة.
+========================================================= */
+
+document.querySelectorAll("img").forEach(img=>{
+
+  img.addEventListener("error",()=>{
+
+    img.style.display="none";
+
+    const parent =
+      img.closest(".service-card,.destination,.experience,.why-image");
+
+    if(parent){
+
+      parent.style.background =
+        "linear-gradient(135deg,#0b2535,#071520)";
+
+    }
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
