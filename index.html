@@ -6,635 +6,924 @@
 
 <title>Rihla Vibes — Discover Morocco, Your Way</title>
 
-<meta name="description" content="Rihla Vibes — Hôtels, Riads, transport, restaurants, circuits, activités et événements au Maroc.">
-<meta name="keywords" content="Rihla Vibes, tourisme Maroc, Marrakech, Chefchaouen, Merzouga, hôtels Maroc, riads Maroc, circuits Maroc">
-<meta name="theme-color" content="#07111f">
+<meta name="description"
+content="Rihla Vibes — Découvrez le Maroc autrement. Hôtels, Riads, transport, restaurants, circuits, activités et événements au Maroc.">
+
+<meta name="keywords"
+content="Rihla Vibes, tourisme Maroc, Morocco Travel, Marrakech, Chefchaouen, Merzouga, hôtels Maroc, riads Maroc, circuits Maroc">
+
+<meta name="theme-color" content="#06111f">
 
 <style>
 *{
-box-sizing:border-box;
-margin:0;
-padding:0
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#06101d;
-color:#fff;
-line-height:1.5
+  margin:0;
+  background:#06111f;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
 }
 
 a{
-color:inherit;
-text-decoration:none
+  text-decoration:none;
+  color:inherit;
 }
 
 img{
-display:block;
-width:100%
+  display:block;
+  width:100%;
 }
 
 :root{
---gold:#e8b84f;
---light:#ffd878;
---card:#0b1a2b;
---muted:#aebac7
+  --navy:#06111f;
+  --navy2:#0a1a2b;
+  --gold:#e9b84f;
+  --gold2:#ffd878;
+  --white:#fff;
+  --muted:#aebac8;
+  --line:rgba(233,184,79,.25);
 }
 
-.wrap{
-width:min(1180px,92%);
-margin:auto
+.container{
+  width:min(1180px,92%);
+  margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
-position:absolute;
-top:0;
-left:0;
-right:0;
-z-index:10;
-padding:8px 0;
-background:linear-gradient(#020711ee,transparent)
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  padding:8px 0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.9),
+    rgba(0,0,0,0)
+  );
 }
 
-.head{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
+
+/* PREMIUM INLINE LOGO */
 
 .logo{
-width:210px;
-height:125px;
-object-fit:contain;
-filter:drop-shadow(0 5px 12px #000)
+  width:245px;
+  height:150px;
+  display:block;
+  filter:
+    drop-shadow(0 8px 15px rgba(0,0,0,.85))
+    drop-shadow(0 0 8px rgba(233,184,79,.22));
+}
+
+.logo svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
 }
 
 .nav{
-display:flex;
-align-items:center;
-gap:24px;
-font-size:14px;
-font-weight:700
+  display:flex;
+  align-items:center;
+  gap:24px;
+  font-size:14px;
+  font-weight:700;
+}
+
+.nav a{
+  transition:.2s;
 }
 
 .nav a:hover{
-color:var(--light)
+  color:var(--gold2);
 }
 
-.langs{
-border:1px solid #ffffff55;
-border-radius:30px;
-padding:3px
+.languages{
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:30px;
+  padding:3px;
 }
 
-.langs span{
-display:inline-block;
-padding:7px 10px;
-border-radius:20px;
-font-size:11px
+.languages span{
+  display:inline-block;
+  padding:7px 11px;
+  border-radius:20px;
+  font-size:11px;
 }
 
-.langs .active{
-background:var(--gold);
-color:#07111f
+.languages .active{
+  background:var(--gold);
+  color:#06111f;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-min-height:760px;
-display:flex;
-align-items:center;
+  min-height:780px;
+  display:flex;
+  align-items:center;
+  position:relative;
 
-background:
-linear-gradient(
-90deg,
-#020711f2,
-#020711a8 45%,
-#02071115
-),
-url("https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&q=85&w=1800")
-center/cover no-repeat
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,8,15,.96) 0%,
+      rgba(2,8,15,.78) 42%,
+      rgba(2,8,15,.18) 100%
+    ),
+    url("https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&q=85&w=1800")
+    center/cover no-repeat;
 }
 
-.heroText{
-max-width:720px;
-padding-top:100px
+.hero-content{
+  max-width:720px;
+  padding-top:110px;
 }
 
 .kicker{
-color:var(--light);
-font-size:12px;
-letter-spacing:4px;
-font-weight:800;
-margin-bottom:14px
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:4px;
+  margin-bottom:15px;
 }
 
 .hero h1{
-font-family:Georgia,serif;
-font-size:clamp(48px,7vw,82px);
-line-height:1.02;
-margin-bottom:20px
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(48px,7vw,84px);
+  line-height:1;
+  margin-bottom:23px;
 }
 
 .hero h1 span{
-color:var(--light)
+  color:var(--gold2);
 }
 
 .hero p{
-font-size:18px;
-color:#e7edf4;
-max-width:650px;
-margin-bottom:28px
+  max-width:650px;
+  color:#e7edf4;
+  font-size:18px;
+  margin-bottom:30px;
 }
 
 .buttons{
-display:flex;
-gap:12px;
-flex-wrap:wrap
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:14px 25px;
-border-radius:30px;
-font-weight:800;
-border:1px solid var(--gold)
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:30px;
+  border:1px solid var(--gold);
+  font-weight:800;
+  transition:.2s;
 }
 
-.gold{
-background:var(--gold);
-color:#07111f
+.btn:hover{
+  transform:translateY(-2px);
 }
 
-.outline{
-background:#0005;
-color:#fff
+.btn-gold{
+  background:var(--gold);
+  color:#06111f;
 }
 
-/* SECTIONS */
+.btn-outline{
+  background:rgba(0,0,0,.28);
+  color:#fff;
+}
+
+/* ================= SECTIONS ================= */
 
 section{
-padding:78px 0
+  padding:80px 0;
 }
 
-.title{
-text-align:center;
-max-width:800px;
-margin:0 auto 40px
+.section-title{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 42px;
 }
 
-.title h2{
-font-family:Georgia,serif;
-font-size:43px;
-line-height:1.1;
-margin:8px 0 12px
+.section-title h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:44px;
+  line-height:1.1;
+  margin:8px 0 13px;
 }
 
-.title p{
-color:var(--muted)
+.section-title p{
+  color:var(--muted);
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services{
-background:#071525
+  background:#071626;
 }
 
-.servicesGrid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:14px
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
 }
 
 .service{
-height:215px;
-border:1px solid #e9b94f44;
-border-radius:18px;
-overflow:hidden;
-position:relative;
-background:var(--card)
+  height:225px;
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+  background:#0b1b2d;
+  border:1px solid var(--line);
 }
 
 .service img{
-height:100%;
-object-fit:cover
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
 }
 
-.service:after{
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(transparent 20%,#02070de8)
+.service:hover img{
+  transform:scale(1.06);
 }
 
-.serviceText{
-position:absolute;
-z-index:2;
-left:10px;
-right:10px;
-bottom:14px;
-text-align:center
+.service::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      transparent 15%,
+      rgba(0,0,0,.92)
+    );
 }
 
-.icon{
-width:46px;
-height:46px;
-border-radius:50%;
-display:grid;
-place-items:center;
-background:var(--gold);
-color:#07111f;
-margin:0 auto 8px;
-font-size:20px
+.service-content{
+  position:absolute;
+  z-index:2;
+  left:10px;
+  right:10px;
+  bottom:15px;
+  text-align:center;
+}
+
+.service-icon{
+  width:48px;
+  height:48px;
+  margin:0 auto 8px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--gold);
+  color:#06111f;
+  font-size:21px;
+  box-shadow:0 5px 18px rgba(0,0,0,.45);
 }
 
 .service h3{
-font-family:Georgia,serif;
-font-size:17px
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
 }
 
-/* DESTINATIONS */
+/* ================= DESTINATIONS ================= */
 
-.dest{
-background:#06101d
+.destinations{
+  background:#06111f;
 }
 
-.destGrid{
-display:grid;
-grid-template-columns:repeat(6,1fr);
-gap:12px
+.destinations-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:13px;
 }
 
-.card{
-height:170px;
-border-radius:16px;
-overflow:hidden;
-position:relative;
-border:1px solid #e9b94f33
+.destination{
+  height:175px;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid var(--line);
 }
 
-.card img{
-height:100%;
-object-fit:cover
+.destination img{
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
 }
 
-.card:after{
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(transparent 35%,#02070de8)
+.destination:hover img{
+  transform:scale(1.07);
 }
 
-.card h3{
-position:absolute;
-z-index:2;
-left:8px;
-right:8px;
-bottom:10px;
-text-align:center;
-font-family:Georgia,serif
+.destination::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      transparent 30%,
+      rgba(0,0,0,.9)
+    );
 }
 
-/* EXPERIENCES */
-
-.expSection{
-background:#081728
+.destination h3{
+  position:absolute;
+  z-index:2;
+  left:10px;
+  right:10px;
+  bottom:12px;
+  text-align:center;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
 }
 
-.expGrid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
+/* ================= EXPERIENCES ================= */
+
+.experiences{
+  background:#081829;
 }
 
-.exp{
-background:var(--card);
-border:1px solid #e9b94f33;
-border-radius:18px;
-overflow:hidden
+.experiences-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.exp img{
-height:205px;
-object-fit:cover
+.experience{
+  overflow:hidden;
+  background:#0b1b2d;
+  border:1px solid var(--line);
+  border-radius:20px;
 }
 
-.expText{
-padding:18px
+.experience img{
+  height:220px;
+  object-fit:cover;
 }
 
-.exp h3{
-font-family:Georgia,serif;
-font-size:21px;
-margin-bottom:5px
+.experience-content{
+  padding:18px;
 }
 
-.exp p{
-color:var(--muted);
-font-size:14px
+.experience h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22px;
+  margin-bottom:6px;
 }
 
-/* WHY */
+.experience p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ================= WHY ================= */
 
 .why{
-background:#06101d
+  background:#06111f;
 }
 
-.whyGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:45px;
-align-items:center
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
 }
 
-.whyPhoto{
-height:450px;
-border-radius:25px;
-overflow:hidden;
-border:1px solid #e9b94f33
+.why-photo{
+  height:470px;
+  overflow:hidden;
+  border-radius:26px;
+  border:1px solid var(--line);
 }
 
-.whyPhoto img{
-height:100%;
-object-fit:cover
+.why-photo img{
+  height:100%;
+  object-fit:cover;
 }
 
-.whyText h2{
-font-family:Georgia,serif;
-font-size:45px;
-line-height:1.08;
-margin:8px 0 15px
+.why-content h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:46px;
+  line-height:1.08;
+  margin:8px 0 15px;
 }
 
-.whyText>p{
-color:var(--muted);
-margin-bottom:22px
+.why-content > p{
+  color:var(--muted);
+  margin-bottom:25px;
 }
 
 .points{
-display:grid;
-gap:14px
+  display:grid;
+  gap:17px;
 }
 
 .point{
-display:flex;
-gap:12px
+  display:flex;
+  gap:13px;
 }
 
-.point b:first-child{
-color:var(--gold);
-font-size:20px
+.point-symbol{
+  color:var(--gold);
+  font-size:21px;
+}
+
+.point strong{
+  display:block;
 }
 
 .point small{
-color:var(--muted)
+  color:var(--muted);
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta{
-background:
-linear-gradient(#030914dd,#030914dd),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=85&w=1800")
-center/cover;
-text-align:center
+  text-align:center;
+
+  background:
+    linear-gradient(
+      rgba(3,9,18,.88),
+      rgba(3,9,18,.88)
+    ),
+    url("https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&q=85&w=1800")
+    center/cover no-repeat;
 }
 
 .cta h2{
-font-family:Georgia,serif;
-font-size:48px;
-margin:8px 0 12px
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:48px;
+  margin:8px 0 13px;
 }
 
 .cta p{
-color:#e3e9ef;
-margin-bottom:25px
+  color:#e3e9ef;
+  margin-bottom:27px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-background:#030914;
-padding:45px 0 85px;
-border-top:1px solid #e9b94f22
+  background:#030914;
+  padding:50px 0 90px;
+  border-top:1px solid rgba(233,184,79,.2);
 }
 
-.foot{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:30px
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:35px;
 }
 
 footer h3{
-color:var(--gold);
-font-family:Georgia,serif;
-margin-bottom:12px
+  color:var(--gold);
+  font-family:Georgia,"Times New Roman",serif;
+  margin-bottom:13px;
 }
 
 footer p,
 footer a{
-color:#9eacbb;
-font-size:14px
+  color:#9eacbb;
+  font-size:14px;
 }
 
-.links{
-display:grid;
-gap:7px
+.footer-links{
+  display:grid;
+  gap:8px;
 }
 
-.copy{
-text-align:center;
-border-top:1px solid #ffffff12;
-margin-top:30px;
-padding-top:18px;
-color:#627184;
-font-size:12px
+.copyright{
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:35px;
+  padding-top:18px;
+  color:#657487;
+  font-size:12px;
 }
 
-/* MOBILE NAV */
+/* ================= MOBILE BOTTOM NAV ================= */
 
-.bottom{
-display:none
+.mobile-nav{
+  display:none;
 }
 
-/* RESPONSIVE */
+/* ================= TABLET ================= */
 
 @media(max-width:1050px){
 
-.servicesGrid{
-grid-template-columns:repeat(3,1fr)
+  .services-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .destinations-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
 }
 
-.destGrid{
-grid-template-columns:repeat(3,1fr)
-}
-
-}
+/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
-header{
-padding:5px 0
-}
+  header{
+    padding:4px 0;
+  }
 
-.logo{
-width:145px;
-height:100px
-}
+  .logo{
+    width:155px;
+    height:105px;
+  }
 
-.nav{
-display:none
-}
+  .nav{
+    display:none;
+  }
 
-.hero{
-min-height:700px
-}
+  .hero{
+    min-height:720px;
+    background-position:center;
+  }
 
-.heroText{
-padding-top:110px
-}
+  .hero-content{
+    padding-top:115px;
+  }
 
-.hero h1{
-font-size:46px
-}
+  .hero h1{
+    font-size:46px;
+  }
 
-.hero p{
-font-size:15px
-}
+  .hero p{
+    font-size:15px;
+  }
 
-.buttons{
-display:grid;
-grid-template-columns:1fr
-}
+  .buttons{
+    display:grid;
+    grid-template-columns:1fr;
+  }
 
-.btn{
-text-align:center
-}
+  .btn{
+    text-align:center;
+  }
 
-section{
-padding:62px 0
-}
+  section{
+    padding:62px 0;
+  }
 
-.title h2{
-font-size:34px
-}
+  .section-title h2{
+    font-size:34px;
+  }
 
-.servicesGrid{
-grid-template-columns:repeat(2,1fr);
-gap:10px
-}
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
 
-.service{
-height:190px
-}
+  .service{
+    height:190px;
+  }
 
-.service h3{
-font-size:15px
-}
+  .service h3{
+    font-size:15px;
+  }
 
-.destGrid{
-grid-template-columns:repeat(2,1fr)
-}
+  .destinations-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-.card{
-height:150px
-}
+  .destination{
+    height:150px;
+  }
 
-.expGrid{
-grid-template-columns:1fr
-}
+  .experiences-grid{
+    grid-template-columns:1fr;
+  }
 
-.whyGrid{
-grid-template-columns:1fr;
-gap:28px
-}
+  .why-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
 
-.whyPhoto{
-height:330px
-}
+  .why-photo{
+    height:330px;
+  }
 
-.whyText h2{
-font-size:37px
-}
+  .why-content h2{
+    font-size:37px;
+  }
 
-.cta h2{
-font-size:37px
-}
+  .cta h2{
+    font-size:37px;
+  }
 
-.foot{
-grid-template-columns:1fr
-}
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
 
-.bottom{
-position:fixed;
-display:flex;
-z-index:50;
-bottom:0;
-left:0;
-right:0;
-height:67px;
-background:#030a14;
-border-top:1px solid #e9b94f33;
-justify-content:space-around;
-align-items:center
-}
+  .mobile-nav{
+    position:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    left:0;
+    right:0;
+    bottom:0;
+    height:68px;
+    z-index:200;
+    background:#030a14;
+    border-top:1px solid rgba(233,184,79,.3);
+  }
 
-.bottom a{
-font-size:9px;
-color:#8795a5;
-text-align:center
-}
+  .mobile-nav a{
+    color:#8997a8;
+    text-align:center;
+    font-size:9px;
+  }
 
-.bottom a:first-child{
-color:var(--gold)
-}
+  .mobile-nav a:first-child{
+    color:var(--gold);
+  }
 
-.bottom span{
-display:block;
-font-size:19px;
-margin-bottom:1px
-}
-
+  .mobile-nav span{
+    display:block;
+    font-size:20px;
+    margin-bottom:1px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+<div class="container header-inner">
 
-<div class="wrap head">
+<a href="#home" class="logo">
 
-<a href="#home">
+<svg viewBox="0 0 500 300"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-label="Rihla Vibes">
 
-<img
-class="logo"
-alt="Rihla Vibes"
-src="data:image/webp;base64,PUT_LOGO_DATA_HERE">
+<defs>
+
+<linearGradient id="goldGradient"
+x1="0" y1="0" x2="1" y2="1">
+
+<stop offset="0%" stop-color="#fff1a3"/>
+<stop offset="25%" stop-color="#ffd15a"/>
+<stop offset="55%" stop-color="#e39b18"/>
+<stop offset="80%" stop-color="#ffe276"/>
+<stop offset="100%" stop-color="#b86d08"/>
+
+</linearGradient>
+
+<linearGradient id="whiteGradient"
+x1="0" y1="0" x2="1" y2="1">
+
+<stop offset="0%" stop-color="#ffffff"/>
+<stop offset="55%" stop-color="#f4f0e8"/>
+<stop offset="100%" stop-color="#c9c6bd"/>
+
+</linearGradient>
+
+<filter id="shadow">
+
+<feDropShadow
+dx="0"
+dy="5"
+stdDeviation="5"
+flood-color="#000"
+flood-opacity=".8"/>
+
+</filter>
+
+</defs>
+
+<!-- outer luxury circle -->
+
+<circle
+cx="250"
+cy="150"
+r="137"
+fill="none"
+stroke="url(#goldGradient)"
+stroke-width="7"/>
+
+<!-- sun -->
+
+<circle
+cx="320"
+cy="92"
+r="48"
+fill="url(#goldGradient)"
+opacity=".95"/>
+
+<!-- sun rays -->
+
+<path
+d="M286 92 L355 92"
+stroke="#07111f"
+stroke-width="4"
+opacity=".7"/>
+
+<path
+d="M290 77 L350 77"
+stroke="#07111f"
+stroke-width="4"
+opacity=".7"/>
+
+<!-- mountains -->
+
+<path
+d="M95 177 L165 102 L205 146 L253 86 L322 177 Z"
+fill="#071828"
+stroke="url(#goldGradient)"
+stroke-width="5"/>
+
+<path
+d="M130 168 L165 102 L190 143 Z"
+fill="url(#goldGradient)"
+opacity=".95"/>
+
+<path
+d="M213 143 L253 86 L281 141 Z"
+fill="url(#whiteGradient)"
+opacity=".9"/>
+
+<path
+d="M264 151 L301 112 L322 177 Z"
+fill="url(#goldGradient)"
+opacity=".85"/>
+
+<!-- palm trees -->
+
+<path
+d="M368 116 L368 173"
+stroke="url(#goldGradient)"
+stroke-width="5"/>
+
+<path
+d="M368 119
+C343 105 338 91 339 82
+C354 91 366 96 368 110
+C372 95 383 83 397 78
+C396 96 386 109 370 119"
+fill="none"
+stroke="#dba92e"
+stroke-width="5"/>
+
+<path
+d="M390 131 L390 174"
+stroke="url(#goldGradient)"
+stroke-width="5"/>
+
+<path
+d="M390 134
+C369 121 363 111 364 103
+C378 109 386 117 390 128
+C395 115 405 105 417 102
+C415 116 406 128 392 135"
+fill="none"
+stroke="#dba92e"
+stroke-width="5"/>
+
+<!-- airplane -->
+
+<path
+d="M104 74
+L177 47
+L202 51
+L173 65
+L142 88
+L128 86
+L151 69
+L104 79 Z"
+fill="url(#goldGradient)"
+stroke="#8c5709"
+stroke-width="2"
+filter="url(#shadow)"/>
+
+<!-- central plate -->
+
+<path
+d="M74 183
+C150 157 350 157 426 183
+C365 205 135 205 74 183 Z"
+fill="#05090f"
+opacity=".88"
+stroke="url(#goldGradient)"
+stroke-width="4"/>
+
+<!-- RIHLA -->
+
+<text
+x="250"
+y="188"
+text-anchor="middle"
+font-family="Georgia,serif"
+font-size="51"
+font-weight="900"
+font-style="italic"
+fill="url(#whiteGradient)"
+stroke="#8d5708"
+stroke-width="1.5"
+filter="url(#shadow)">
+RIHLA
+</text>
+
+<!-- VIBES -->
+
+<text
+x="250"
+y="224"
+text-anchor="middle"
+font-family="Arial,sans-serif"
+font-size="34"
+font-weight="900"
+letter-spacing="5"
+fill="url(#goldGradient)"
+filter="url(#shadow)">
+VIBES
+</text>
+
+<!-- tagline -->
+
+<text
+x="250"
+y="247"
+text-anchor="middle"
+font-family="Arial,sans-serif"
+font-size="9"
+font-weight="700"
+letter-spacing="3"
+fill="#f6d46d">
+TRAVEL • EXPLORE • EXPERIENCE
+</text>
+
+<!-- compass -->
+
+<circle
+cx="250"
+cy="265"
+r="12"
+fill="#07111f"
+stroke="url(#goldGradient)"
+stroke-width="3"/>
+
+<path
+d="M250 249 L254 265 L250 281 L246 265 Z"
+fill="url(#goldGradient)"/>
+
+<path
+d="M234 265 L250 262 L266 265 L250 268 Z"
+fill="url(#goldGradient)"/>
+
+</svg>
 
 </a>
 
+
 <nav class="nav">
 
-<a href="#services">Services</a>
+<a href="#services">
+Services
+</a>
 
-<a href="#destinations">Destinations</a>
+<a href="#destinations">
+Destinations
+</a>
 
-<a href="#experiences">Expériences</a>
+<a href="#experiences">
+Expériences
+</a>
 
-<a href="#why">Pourquoi nous</a>
+<a href="#why">
+Pourquoi nous
+</a>
 
-<a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
 
-<div class="langs">
+<div class="languages">
 <span class="active">FR</span>
 <span>AR</span>
 <span>EN</span>
@@ -643,15 +932,16 @@ src="data:image/webp;base64,PUT_LOGO_DATA_HERE">
 </nav>
 
 </div>
-
 </header>
 
+
+<!-- ================= HERO ================= -->
 
 <main id="home">
 
 <section class="hero">
 
-<div class="wrap heroText">
+<div class="container hero-content">
 
 <div class="kicker">
 RIHLA VIBES · MAROC
@@ -671,11 +961,15 @@ circuits, activités et événements.
 
 <div class="buttons">
 
-<a class="btn gold" href="#destinations">
+<a
+class="btn btn-gold"
+href="#destinations">
 Découvrir le Maroc →
 </a>
 
-<a class="btn outline" href="#services">
+<a
+class="btn btn-outline"
+href="#services">
 Voir nos services
 </a>
 
@@ -686,11 +980,15 @@ Voir nos services
 </section>
 
 
-<section class="services" id="services">
+<!-- ================= SERVICES ================= -->
 
-<div class="wrap">
+<section
+class="services"
+id="services">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 
 <div class="kicker">
 NOS SERVICES
@@ -707,18 +1005,20 @@ Une expérience simple, moderne et personnalisée.
 </div>
 
 
-<div class="servicesGrid">
+<div class="services-grid">
 
 
 <article class="service">
 
 <img
 src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=85&w=1000"
-alt="Hôtels et Riads">
+alt="Hôtels et Riads au Maroc">
 
-<div class="serviceText">
+<div class="service-content">
 
-<div class="icon">🏨</div>
+<div class="service-icon">
+🏨
+</div>
 
 <h3>
 Hôtels & Riads
@@ -735,9 +1035,11 @@ Hôtels & Riads
 src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=85&w=1000"
 alt="Transport touristique">
 
-<div class="serviceText">
+<div class="service-content">
 
-<div class="icon">🚌</div>
+<div class="service-icon">
+🚌
+</div>
 
 <h3>
 Transport
@@ -752,11 +1054,13 @@ Transport
 
 <img
 src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=85&w=1000"
-alt="Restaurants">
+alt="Restaurant">
 
-<div class="serviceText">
+<div class="service-content">
 
-<div class="icon">🍽</div>
+<div class="service-icon">
+🍽
+</div>
 
 <h3>
 Restaurants
@@ -771,11 +1075,13 @@ Restaurants
 
 <img
 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=85&w=1000"
-alt="Circuits">
+alt="Circuits et voyages">
 
-<div class="serviceText">
+<div class="service-content">
 
-<div class="icon">🗺</div>
+<div class="service-icon">
+🗺
+</div>
 
 <h3>
 Circuits & Voyages
@@ -790,11 +1096,13 @@ Circuits & Voyages
 
 <img
 src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&q=85&w=1000"
-alt="Événements">
+alt="Événements et activités">
 
-<div class="serviceText">
+<div class="service-content">
 
-<div class="icon">★</div>
+<div class="service-icon">
+★
+</div>
 
 <h3>
 Événements & Activités
@@ -812,11 +1120,15 @@ alt="Événements">
 </section>
 
 
-<section class="dest" id="destinations">
+<!-- ================= DESTINATIONS ================= -->
 
-<div class="wrap">
+<section
+class="destinations"
+id="destinations">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 
 <div class="kicker">
 DESTINATIONS
@@ -834,14 +1146,14 @@ du désert à l'océan.
 </div>
 
 
-<div class="destGrid">
+<div class="destinations-grid">
 
 
-<article class="card">
+<article class="destination">
 
 <img
 src="https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&q=85&w=1000"
-alt="Marrakech">
+alt="Marrakech Maroc">
 
 <h3>
 Marrakech
@@ -850,11 +1162,11 @@ Marrakech
 </article>
 
 
-<article class="card">
+<article class="destination">
 
 <img
 src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=85&w=1000"
-alt="Chefchaouen">
+alt="Chefchaouen Maroc">
 
 <h3>
 Chefchaouen
@@ -863,11 +1175,11 @@ Chefchaouen
 </article>
 
 
-<article class="card">
+<article class="destination">
 
 <img
 src="https://images.unsplash.com/photo-1553603227-2358aabe821e?auto=format&fit=crop&q=85&w=1000"
-alt="Fès">
+alt="Fès Maroc">
 
 <h3>
 Fès
@@ -876,11 +1188,11 @@ Fès
 </article>
 
 
-<article class="card">
+<article class="destination">
 
 <img
 src="https://images.unsplash.com/photo-1567623756898-bfae244aa56e?auto=format&fit=crop&q=85&w=1000"
-alt="Merzouga">
+alt="Merzouga Maroc">
 
 <h3>
 Merzouga
@@ -889,11 +1201,11 @@ Merzouga
 </article>
 
 
-<article class="card">
+<article class="destination">
 
 <img
 src="https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&q=85&w=1000"
-alt="Agadir">
+alt="Agadir Maroc">
 
 <h3>
 Agadir
@@ -902,11 +1214,11 @@ Agadir
 </article>
 
 
-<article class="card">
+<article class="destination">
 
 <img
-src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=85&w=1000"
-alt="Casablanca">
+src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&q=85&w=1000"
+alt="Casablanca Maroc">
 
 <h3>
 Casablanca
@@ -922,11 +1234,15 @@ Casablanca
 </section>
 
 
-<section class="expSection" id="experiences">
+<!-- ================= EXPERIENCES ================= -->
 
-<div class="wrap">
+<section
+class="experiences"
+id="experiences">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 
 <div class="kicker">
 EXPÉRIENCES À VIVRE
@@ -943,16 +1259,16 @@ Culture, nature, mer, désert et gastronomie.
 </div>
 
 
-<div class="expGrid">
+<div class="experiences-grid">
 
 
-<article class="exp">
+<article class="experience">
 
 <img
 src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&q=85&w=1000"
-alt="Culture et artisanat">
+alt="Culture et artisanat marocain">
 
-<div class="expText">
+<div class="experience-content">
 
 <h3>
 Culture & artisanat
@@ -968,13 +1284,13 @@ et savoir-faire marocain.
 </article>
 
 
-<article class="exp">
+<article class="experience">
 
 <img
 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=85&w=1000"
-alt="Randonnée">
+alt="Randonnée et nature">
 
-<div class="expText">
+<div class="experience-content">
 
 <h3>
 Randonnée & nature
@@ -990,13 +1306,13 @@ exceptionnels.
 </article>
 
 
-<article class="exp">
+<article class="experience">
 
 <img
 src="https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&q=85&w=1000"
-alt="Surf">
+alt="Surf et océan">
 
-<div class="expText">
+<div class="experience-content">
 
 <h3>
 Surf & océan
@@ -1011,13 +1327,13 @@ Océan, surf et côte Atlantique.
 </article>
 
 
-<article class="exp">
+<article class="experience">
 
 <img
 src="https://images.unsplash.com/photo-1567623756898-bfae244aa56e?auto=format&fit=crop&q=85&w=1000"
-alt="Merzouga">
+alt="Dunes de Merzouga">
 
-<div class="expText">
+<div class="experience-content">
 
 <h3>
 Dunes de Merzouga
@@ -1033,13 +1349,13 @@ et aventure.
 </article>
 
 
-<article class="exp">
+<article class="experience">
 
 <img
 src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=85&w=1000"
-alt="Gastronomie">
+alt="Gastronomie marocaine">
 
-<div class="expText">
+<div class="experience-content">
 
 <h3>
 Gastronomie
@@ -1055,13 +1371,13 @@ et spécialités locales.
 </article>
 
 
-<article class="exp">
+<article class="experience">
 
 <img
 src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&q=85&w=1000"
-alt="Événements">
+alt="Événements et festivités">
 
-<div class="expText">
+<div class="experience-content">
 
 <h3>
 Événements & festivités
@@ -1084,21 +1400,25 @@ et moments uniques.
 </section>
 
 
-<section class="why" id="why">
+<!-- ================= WHY ================= -->
 
-<div class="wrap whyGrid">
+<section
+class="why"
+id="why">
+
+<div class="container why-grid">
 
 
-<div class="whyPhoto">
+<div class="why-photo">
 
 <img
 src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=85&w=1200"
-alt="Rihla Vibes">
+alt="Rihla Vibes Maroc">
 
 </div>
 
 
-<div class="whyText">
+<div class="why-content">
 
 <div class="kicker">
 POURQUOI RIHLA VIBES ?
@@ -1118,17 +1438,18 @@ pensée pour rendre la découverte plus simple.
 
 <div class="points">
 
+
 <div class="point">
 
-<b>✦</b>
+<div class="point-symbol">
+✦
+</div>
 
 <div>
 
-<b>
+<strong>
 Expériences marocaines
-</b>
-
-<br>
+</strong>
 
 <small>
 Découvrez les différentes facettes du Maroc.
@@ -1141,15 +1462,15 @@ Découvrez les différentes facettes du Maroc.
 
 <div class="point">
 
-<b>✦</b>
+<div class="point-symbol">
+✦
+</div>
 
 <div>
 
-<b>
+<strong>
 Service personnalisé
-</b>
-
-<br>
+</strong>
 
 <small>
 Des solutions adaptées à votre voyage.
@@ -1162,15 +1483,15 @@ Des solutions adaptées à votre voyage.
 
 <div class="point">
 
-<b>✦</b>
+<div class="point-symbol">
+✦
+</div>
 
 <div>
 
-<b>
+<strong>
 Tout au même endroit
-</b>
-
-<br>
+</strong>
 
 <small>
 Hôtels, transport, restaurants,
@@ -1184,15 +1505,15 @@ circuits et activités.
 
 <div class="point">
 
-<b>✦</b>
+<div class="point-symbol">
+✦
+</div>
 
 <div>
 
-<b>
+<strong>
 100% Maroc
-</b>
-
-<br>
+</strong>
 
 <small>
 Une plateforme dédiée au tourisme au Maroc.
@@ -1201,6 +1522,7 @@ Une plateforme dédiée au tourisme au Maroc.
 </div>
 
 </div>
+
 
 </div>
 
@@ -1211,11 +1533,15 @@ Une plateforme dédiée au tourisme au Maroc.
 </section>
 
 
-<section class="cta" id="contact">
+<!-- ================= CTA ================= -->
 
-<div class="wrap">
+<section
+class="cta"
+id="contact">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 
 <div class="kicker">
 RIHLA VIBES
@@ -1230,7 +1556,7 @@ Commencez à préparer votre prochaine expérience.
 </p>
 
 <a
-class="btn gold"
+class="btn btn-gold"
 href="mailto:contact@rihlavibes.ma">
 Nous contacter →
 </a>
@@ -1244,11 +1570,13 @@ Nous contacter →
 </main>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<div class="wrap">
+<div class="container">
 
-<div class="foot">
+<div class="footer-grid">
 
 
 <div>
@@ -1273,7 +1601,7 @@ touristiques au Maroc.
 Navigation
 </h3>
 
-<div class="links">
+<div class="footer-links">
 
 <a href="#services">
 Services
@@ -1302,7 +1630,7 @@ Pourquoi nous
 Contact
 </h3>
 
-<div class="links">
+<div class="footer-links">
 
 <a href="mailto:contact@rihlavibes.ma">
 contact@rihlavibes.ma
@@ -1324,10 +1652,8 @@ Instagram
 </div>
 
 
-<div class="copy">
-
+<div class="copyright">
 © 2026 Rihla Vibes — Discover Morocco, Your Way.
-
 </div>
 
 </div>
@@ -1335,7 +1661,9 @@ Instagram
 </footer>
 
 
-<nav class="bottom">
+<!-- ================= MOBILE NAV ================= -->
+
+<nav class="mobile-nav">
 
 <a href="#home">
 <span>⌂</span>
