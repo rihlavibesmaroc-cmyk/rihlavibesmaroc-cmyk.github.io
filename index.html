@@ -27,7 +27,7 @@
   --gold:#c9a45c;
   --gold2:#e3c47a;
   --cream:#f7f4ee;
-  --white:#ffffff;
+  --white:#fff;
   --text:#18202a;
   --muted:#69717c;
   --line:#e8e3d9;
@@ -47,8 +47,8 @@ html{
 
 body{
   font-family:"DM Sans",Arial,sans-serif;
-  background:#fff;
   color:var(--text);
+  background:#fff;
   overflow-x:hidden;
 }
 
@@ -58,8 +58,8 @@ img{
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 button,
@@ -67,9 +67,7 @@ input{
   font:inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 
 header{
   position:fixed;
@@ -77,53 +75,54 @@ header{
   left:0;
   right:0;
   z-index:1000;
-  background:rgba(7,17,29,.96);
+  background:rgba(7,17,29,.97);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
   max-width:1440px;
-  margin:auto;
   min-height:78px;
+  margin:auto;
   padding:0 28px;
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:25px;
 }
 
 .logo{
   min-width:190px;
-  line-height:.85;
   color:#fff;
+  line-height:.85;
 }
 
 .logo-main{
+  display:block;
   font-family:"Playfair Display",serif;
-  font-size:31px;
+  font-size:28px;
   font-weight:700;
   letter-spacing:5px;
 }
 
 .logo-sub{
   display:block;
+  margin-top:8px;
   color:var(--gold2);
   font-size:8px;
-  letter-spacing:5px;
-  margin-top:7px;
+  letter-spacing:4px;
 }
 
 .nav{
+  flex:1;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:22px;
-  flex:1;
+  gap:20px;
 }
 
 .nav a{
   color:#fff;
-  font-size:13px;
+  font-size:12px;
   font-weight:600;
   white-space:nowrap;
   transition:.25s;
@@ -133,69 +132,58 @@ header{
   color:var(--gold2);
 }
 
-.nav-actions{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
 .lang{
-  border:1px solid rgba(255,255,255,.18);
   color:#fff;
   background:transparent;
+  border:1px solid rgba(255,255,255,.2);
   border-radius:20px;
-  padding:8px 12px;
-  cursor:pointer;
+  padding:8px 13px;
 }
 
 .menu-btn{
   display:none;
-  background:none;
   border:0;
+  background:none;
   color:#fff;
   font-size:28px;
-  cursor:pointer;
 }
 
-/* =========================
-   HERO
-========================= */
+/* ================= HERO ================= */
 
 .hero{
   min-height:850px;
-  position:relative;
   display:flex;
   align-items:center;
+  position:relative;
   overflow:hidden;
   background:
-    linear-gradient(90deg,rgba(4,12,20,.86),rgba(4,12,20,.40),rgba(4,12,20,.15)),
+    linear-gradient(90deg,rgba(4,12,20,.88),rgba(4,12,20,.42),rgba(4,12,20,.10)),
     url("https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&q=90&w=1800")
     center/cover no-repeat;
 }
 
 .hero-content{
-  max-width:1200px;
   width:100%;
-  margin:0 auto;
-  padding:150px 28px 80px;
+  max-width:1200px;
+  margin:auto;
+  padding:145px 28px 70px;
   color:#fff;
 }
 
 .hero-kicker{
+  margin-bottom:20px;
   color:var(--gold2);
   font-size:13px;
+  font-weight:800;
   letter-spacing:5px;
-  font-weight:700;
-  margin-bottom:20px;
   text-transform:uppercase;
 }
 
 .hero h1{
+  max-width:900px;
   font-family:"Playfair Display",serif;
-  font-size:clamp(54px,8vw,100px);
+  font-size:clamp(55px,8vw,100px);
   line-height:.9;
-  letter-spacing:2px;
-  max-width:850px;
 }
 
 .hero h1 span{
@@ -204,28 +192,25 @@ header{
 
 .hero-text{
   max-width:650px;
-  margin:28px 0 35px;
-  color:rgba(255,255,255,.85);
+  margin:30px 0;
+  color:rgba(255,255,255,.86);
   font-size:18px;
   line-height:1.8;
 }
 
 .hero-buttons{
   display:flex;
-  gap:14px;
   flex-wrap:wrap;
+  gap:14px;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
   padding:15px 23px;
   border-radius:30px;
   font-weight:700;
-  border:1px solid transparent;
-  cursor:pointer;
   transition:.25s;
 }
 
@@ -241,7 +226,7 @@ header{
 
 .btn-outline{
   color:#fff;
-  border-color:rgba(255,255,255,.35);
+  border:1px solid rgba(255,255,255,.35);
   background:rgba(255,255,255,.06);
 }
 
@@ -251,37 +236,33 @@ header{
 }
 
 .hero-search{
-  margin-top:55px;
   max-width:900px;
+  margin-top:55px;
   padding:10px;
+  display:flex;
   background:#fff;
   border-radius:18px;
-  display:flex;
-  align-items:center;
-  box-shadow:0 20px 50px rgba(0,0,0,.22);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
 
 .hero-search input{
+  flex:1;
   border:0;
   outline:0;
-  flex:1;
   padding:14px 18px;
-  color:var(--text);
 }
 
 .hero-search button{
   border:0;
-  background:var(--gold);
-  color:#07111d;
   border-radius:12px;
   padding:14px 23px;
+  background:var(--gold);
+  color:#07111d;
   font-weight:700;
   cursor:pointer;
 }
 
-/* =========================
-   GENERAL
-========================= */
+/* ================= GENERAL ================= */
 
 section{
   padding:95px 24px;
@@ -293,40 +274,38 @@ section{
 }
 
 .section-head{
-  text-align:center;
   margin-bottom:48px;
+  text-align:center;
 }
 
 .kicker{
+  margin-bottom:12px;
   color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:4px;
   font-size:12px;
   font-weight:800;
-  margin-bottom:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
 }
 
 .section-head h2{
+  color:var(--navy);
   font-family:"Playfair Display",serif;
   font-size:clamp(36px,5vw,58px);
-  color:var(--navy);
 }
 
 .section-head p{
-  max-width:680px;
+  max-width:700px;
   margin:15px auto 0;
   color:var(--muted);
   line-height:1.8;
 }
 
-/* =========================
-   SERVICE CARDS
-========================= */
+/* ================= SERVICES ================= */
 
 .services{
-  background:var(--cream);
   padding-top:75px;
   padding-bottom:75px;
+  background:var(--cream);
 }
 
 .service-grid{
@@ -336,10 +315,10 @@ section{
 }
 
 .service-card{
+  min-height:280px;
   position:relative;
-  min-height:270px;
-  border-radius:22px;
   overflow:hidden;
+  border-radius:23px;
   color:#fff;
   box-shadow:var(--shadow);
   isolation:isolate;
@@ -348,10 +327,10 @@ section{
 .service-card img{
   position:absolute;
   inset:0;
+  z-index:-2;
   height:100%;
   object-fit:cover;
   transition:.5s;
-  z-index:-2;
 }
 
 .service-card::after{
@@ -361,8 +340,8 @@ section{
   z-index:-1;
   background:linear-gradient(
     180deg,
-    rgba(7,17,29,.05),
-    rgba(7,17,29,.82)
+    rgba(7,17,29,.03),
+    rgba(7,17,29,.88)
   );
 }
 
@@ -371,8 +350,7 @@ section{
 }
 
 .service-content{
-  height:100%;
-  min-height:270px;
+  min-height:280px;
   padding:25px;
   display:flex;
   flex-direction:column;
@@ -383,39 +361,33 @@ section{
   position:absolute;
   top:20px;
   left:20px;
-  width:52px;
-  height:52px;
-  border-radius:16px;
+  width:55px;
+  height:55px;
   display:grid;
   place-items:center;
-  background:rgba(255,255,255,.93);
-  color:#9b7130;
-  box-shadow:0 10px 25px rgba(0,0,0,.18);
+  border-radius:17px;
+  background:rgba(255,255,255,.94);
+  color:#98702d;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 .service-icon svg{
-  width:27px;
-  height:27px;
+  width:28px;
+  height:28px;
 }
 
 .service-card h3{
+  margin-bottom:7px;
   font-family:"Playfair Display",serif;
   font-size:29px;
-  margin-bottom:7px;
 }
 
 .service-card p{
-  color:rgba(255,255,255,.82);
+  color:rgba(255,255,255,.84);
   font-size:14px;
 }
 
-/* =========================
-   DESTINATIONS
-========================= */
-
-.destinations{
-  background:#fff;
-}
+/* ================= DESTINATIONS ================= */
 
 .destination-grid{
   display:grid;
@@ -425,9 +397,9 @@ section{
 
 .destination{
   height:390px;
-  border-radius:25px;
-  overflow:hidden;
   position:relative;
+  overflow:hidden;
+  border-radius:25px;
   color:#fff;
   box-shadow:var(--shadow);
 }
@@ -445,7 +417,7 @@ section{
   background:linear-gradient(
     180deg,
     rgba(0,0,0,.02),
-    rgba(0,0,0,.82)
+    rgba(0,0,0,.84)
   );
 }
 
@@ -456,33 +428,31 @@ section{
 .destination-info{
   position:absolute;
   z-index:2;
-  left:25px;
   right:25px;
   bottom:25px;
+  left:25px;
 }
 
 .destination-tag{
   color:var(--gold2);
-  text-transform:uppercase;
-  letter-spacing:3px;
   font-size:11px;
   font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
 .destination h3{
+  margin:8px 0;
   font-family:"Playfair Display",serif;
   font-size:34px;
-  margin:8px 0;
 }
 
 .destination p{
-  color:rgba(255,255,255,.84);
+  color:rgba(255,255,255,.86);
   font-size:14px;
 }
 
-/* =========================
-   FEATURE SPLIT
-========================= */
+/* ================= SPLIT ================= */
 
 .split{
   background:var(--cream);
@@ -496,10 +466,10 @@ section{
 }
 
 .split-image{
-  border-radius:28px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
   min-height:570px;
+  overflow:hidden;
+  border-radius:28px;
+  box-shadow:var(--shadow);
 }
 
 .split-image img{
@@ -507,57 +477,46 @@ section{
   object-fit:cover;
 }
 
-.split-content .kicker{
-  text-align:left;
-}
-
 .split-content h2{
-  font-family:"Playfair Display",serif;
+  margin-bottom:20px;
   color:var(--navy);
+  font-family:"Playfair Display",serif;
   font-size:clamp(38px,5vw,58px);
   line-height:1.05;
-  margin-bottom:20px;
 }
 
 .split-content p{
+  margin-bottom:22px;
   color:var(--muted);
   line-height:1.8;
-  margin-bottom:22px;
 }
 
 .list{
-  list-style:none;
   display:grid;
   gap:13px;
   margin-bottom:28px;
+  list-style:none;
 }
 
 .list li{
   display:flex;
-  gap:12px;
   align-items:center;
-  color:#39414c;
+  gap:12px;
 }
 
 .list li::before{
   content:"✓";
   width:25px;
   height:25px;
+  display:grid;
+  place-items:center;
   border-radius:50%;
   background:#f0e1be;
   color:#98702d;
-  display:grid;
-  place-items:center;
   font-weight:800;
 }
 
-/* =========================
-   EXPERIENCE CARDS
-========================= */
-
-.experiences{
-  background:#fff;
-}
+/* ================= EXPERIENCES ================= */
 
 .experience-grid{
   display:grid;
@@ -566,9 +525,9 @@ section{
 }
 
 .experience{
+  overflow:hidden;
   border:1px solid var(--line);
   border-radius:23px;
-  overflow:hidden;
   background:#fff;
   transition:.3s;
 }
@@ -597,15 +556,11 @@ section{
   padding:25px;
 }
 
-.experience-body .kicker{
-  margin-bottom:8px;
-}
-
 .experience-body h3{
+  margin-bottom:10px;
+  color:var(--navy);
   font-family:"Playfair Display",serif;
   font-size:28px;
-  color:var(--navy);
-  margin-bottom:10px;
 }
 
 .experience-body p{
@@ -615,14 +570,12 @@ section{
 
 .text-link{
   display:inline-block;
+  margin-top:16px;
   color:#9b7130;
   font-weight:800;
-  margin-top:16px;
 }
 
-/* =========================
-   SERVICE DETAIL SECTIONS
-========================= */
+/* ================= DETAILS ================= */
 
 .detail{
   background:var(--cream);
@@ -635,12 +588,8 @@ section{
 .detail-box{
   display:grid;
   grid-template-columns:1.05fr .95fr;
-  gap:65px;
   align-items:center;
-}
-
-.detail.reverse .detail-box{
-  grid-template-columns:.95fr 1.05fr;
+  gap:65px;
 }
 
 .detail.reverse .detail-image{
@@ -649,8 +598,8 @@ section{
 
 .detail-image{
   height:510px;
-  border-radius:28px;
   overflow:hidden;
+  border-radius:28px;
   box-shadow:var(--shadow);
 }
 
@@ -660,17 +609,17 @@ section{
 }
 
 .detail-content h2{
+  margin:10px 0 20px;
+  color:var(--navy);
   font-family:"Playfair Display",serif;
   font-size:clamp(38px,5vw,56px);
   line-height:1.05;
-  color:var(--navy);
-  margin:10px 0 20px;
 }
 
 .detail-content p{
+  margin-bottom:22px;
   color:var(--muted);
   line-height:1.8;
-  margin-bottom:22px;
 }
 
 .detail-points{
@@ -681,9 +630,8 @@ section{
 
 .detail-points div{
   display:flex;
-  gap:11px;
   align-items:center;
-  color:#424953;
+  gap:11px;
 }
 
 .detail-points span{
@@ -691,9 +639,7 @@ section{
   font-weight:900;
 }
 
-/* =========================
-   STATS
-========================= */
+/* ================= STATS ================= */
 
 .stats{
   background:var(--navy);
@@ -722,13 +668,7 @@ section{
   color:rgba(255,255,255,.68);
 }
 
-/* =========================
-   WHY US
-========================= */
-
-.why{
-  background:#fff;
-}
+/* ================= WHY ================= */
 
 .why-grid{
   display:grid;
@@ -737,19 +677,19 @@ section{
 }
 
 .why-card{
+  padding:28px 22px;
   border:1px solid var(--line);
   border-radius:20px;
-  padding:28px 22px;
   text-align:center;
 }
 
 .why-icon{
   width:58px;
   height:58px;
-  border-radius:18px;
   margin:0 auto 18px;
   display:grid;
   place-items:center;
+  border-radius:18px;
   background:#f7edda;
   color:#9d7637;
 }
@@ -760,8 +700,8 @@ section{
 }
 
 .why-card h3{
-  font-size:18px;
   margin-bottom:9px;
+  font-size:18px;
 }
 
 .why-card p{
@@ -770,42 +710,38 @@ section{
   line-height:1.6;
 }
 
-/* =========================
-   CTA
-========================= */
+/* ================= CTA ================= */
 
 .cta{
   padding:90px 24px;
-  background:
-    linear-gradient(90deg,rgba(7,17,29,.94),rgba(7,17,29,.65)),
-    url("https://images.unsplash.com/photo-1508513268030-f8a9af25721c?auto=format&fit=crop&fm=jpg&q=90&w=1800")
-    center/cover;
   color:#fff;
   text-align:center;
+  background:
+    linear-gradient(90deg,rgba(7,17,29,.94),rgba(7,17,29,.62)),
+    url("https://images.unsplash.com/photo-1508513268030-f8a9af25721c?auto=format&fit=crop&fm=jpg&q=90&w=1800")
+    center/cover;
 }
 
 .cta h2{
+  max-width:850px;
+  margin:auto;
   font-family:"Playfair Display",serif;
   font-size:clamp(38px,6vw,65px);
-  max-width:850px;
-  margin:0 auto 18px;
 }
 
 .cta p{
   max-width:650px;
-  margin:0 auto 28px;
+  margin:18px auto 28px;
   color:rgba(255,255,255,.8);
   line-height:1.8;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 footer{
-  background:#050d16;
-  color:#fff;
   padding:65px 24px 25px;
+  color:#fff;
+  background:#050d16;
 }
 
 .footer-grid{
@@ -817,16 +753,16 @@ footer{
 }
 
 .footer-brand p{
+  max-width:350px;
+  margin-top:18px;
   color:rgba(255,255,255,.6);
   line-height:1.7;
-  margin-top:18px;
-  max-width:350px;
 }
 
 .footer h3{
+  margin-bottom:18px;
   color:var(--gold2);
   font-size:15px;
-  margin-bottom:18px;
 }
 
 .footer-links{
@@ -847,62 +783,46 @@ footer{
   max-width:1200px;
   margin:50px auto 0;
   padding-top:20px;
-  border-top:1px solid rgba(255,255,255,.1);
   display:flex;
   justify-content:space-between;
   gap:20px;
+  border-top:1px solid rgba(255,255,255,.1);
   color:rgba(255,255,255,.45);
   font-size:12px;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
   position:fixed;
   right:22px;
   bottom:22px;
   z-index:900;
-  width:60px;
-  height:60px;
-  border-radius:50%;
+  width:62px;
+  height:62px;
   display:grid;
   place-items:center;
+  border-radius:50%;
   background:#20c76a;
   color:#fff;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  box-shadow:0 12px 30px rgba(0,0,0,.28);
 }
 
 .whatsapp svg{
-  width:30px;
-  height:30px;
+  width:31px;
+  height:31px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:1050px){
-
-  .navbar{
-    gap:15px;
-  }
 
   .nav{
     gap:12px;
   }
 
   .nav a{
-    font-size:11px;
-  }
-
-  .logo{
-    min-width:165px;
-  }
-
-  .logo-main{
-    font-size:25px;
+    font-size:10px;
   }
 
   .service-grid,
@@ -922,10 +842,6 @@ footer{
 
 @media(max-width:760px){
 
-  header{
-    position:fixed;
-  }
-
   .navbar{
     min-height:70px;
     padding:0 17px;
@@ -938,12 +854,11 @@ footer{
     top:70px;
     left:0;
     right:0;
-    background:#07111d;
     padding:20px;
     flex-direction:column;
     align-items:flex-start;
     gap:0;
-    border-top:1px solid rgba(255,255,255,.08);
+    background:#07111d;
   }
 
   .nav.open{
@@ -953,8 +868,8 @@ footer{
   .nav a{
     width:100%;
     padding:14px 5px;
-    font-size:14px;
     border-bottom:1px solid rgba(255,255,255,.07);
+    font-size:14px;
   }
 
   .nav-actions{
@@ -971,7 +886,6 @@ footer{
 
   .logo-sub{
     font-size:7px;
-    letter-spacing:4px;
   }
 
   .hero{
@@ -993,7 +907,6 @@ footer{
   .hero-search{
     flex-direction:column;
     align-items:stretch;
-    background:rgba(255,255,255,.96);
   }
 
   .hero-search button{
@@ -1031,8 +944,8 @@ footer{
   .split-image,
   .split-image img,
   .detail-image{
-    min-height:380px;
     height:380px;
+    min-height:380px;
   }
 
   .footer-bottom{
@@ -1040,10 +953,10 @@ footer{
   }
 
   .whatsapp{
-    width:55px;
-    height:55px;
     right:15px;
     bottom:15px;
+    width:57px;
+    height:57px;
   }
 }
 </style>
@@ -1051,9 +964,7 @@ footer{
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
   <div class="navbar">
@@ -1086,9 +997,7 @@ footer{
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="accueil">
 
@@ -1109,6 +1018,7 @@ footer{
     </p>
 
     <div class="hero-buttons">
+
       <a href="#destinations" class="btn btn-gold">
         Explorer le Maroc →
       </a>
@@ -1116,12 +1026,1506 @@ footer{
       <a href="#contact" class="btn btn-outline">
         Planifier mon voyage
       </a>
+
     </div>
 
     <div class="hero-search">
+
       <input
         id="searchInput"
         type="text"
         placeholder="Rechercher Marrakech, Fès, Sahara, Riad..."
       >
-      <button onclick
+
+      <button onclick="searchSite()">
+        Rechercher
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="kicker">Nos services</div>
+      <h2>Tout pour votre séjour</h2>
+      <p>
+        Une expérience complète au Maroc : hébergement, transport VIP,
+        gastronomie, circuits, événements et activités.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+
+      <!-- HOTELS -->
+
+      <a href="#hotels" class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1763998861638-c83bef652bd7?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Riad marocain traditionnel"
+          loading="lazy"
+        >
+
+        <div class="service-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M3 21V5h18v16"/>
+            <path d="M7 9h2M7 13h2M15 9h2M15 13h2"/>
+            <path d="M9 21v-4h6v4"/>
+
+          </svg>
+
+        </div>
+
+        <div class="service-content">
+          <h3>Hôtels & Riads</h3>
+          <p>Riads authentiques • Hôtels de charme • Séjours premium</p>
+        </div>
+
+      </a>
+
+
+      <!-- TRANSPORT VIP -->
+
+      <a href="#transport" class="service-card">
+
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D1024%2Ch%3D1024%2Cfit%3Dcrop/m7VDo3KJlxH7XoQ0/mise-a-dispo-1-ncWtNUsYGiTrwU4D.png"
+          alt="Mercedes V-Class transport VIP avec chauffeur"
+          loading="lazy"
+        >
+
+        <div class="service-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M5 17h14l-1-6H6l-1 6Z"/>
+            <path d="M7 11l1.5-4h7L17 11"/>
+            <circle cx="8" cy="18" r="1.5"/>
+            <circle cx="16" cy="18" r="1.5"/>
+
+          </svg>
+
+        </div>
+
+        <div class="service-content">
+          <h3>Transport VIP</h3>
+          <p>Mercedes • Chauffeur privé • Transferts & déplacements</p>
+        </div>
+
+      </a>
+
+
+      <!-- RESTAURANTS -->
+
+      <a href="#restaurants" class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1674657704103-b153830ba294?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Restaurant marocain élégant"
+          loading="lazy"
+        >
+
+        <div class="service-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M7 3v8M4 3v8a3 3 0 0 0 6 0V3"/>
+            <path d="M7 14v7"/>
+            <path d="M16 3v18"/>
+            <path d="M16 3c3 2 4 5 0 7"/>
+
+          </svg>
+
+        </div>
+
+        <div class="service-content">
+          <h3>Restaurants</h3>
+          <p>Tables sélectionnées • Cuisine marocaine • Gastronomie</p>
+        </div>
+
+      </a>
+
+
+      <!-- CIRCUITS -->
+
+      <a href="#voyages" class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1527338611623-4e242563220a?auto=format&fit=crop&q=90&w=1400"
+          alt="Circuit touristique au Maroc"
+          loading="lazy"
+        >
+
+        <div class="service-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M4 19c5-7 8-7 16-14"/>
+            <path d="M15 5h5v5"/>
+            <circle cx="5" cy="19" r="2"/>
+
+          </svg>
+
+        </div>
+
+        <div class="service-content">
+          <h3>Circuits</h3>
+          <p>Voyages sur mesure • Désert • Montagnes • Villes impériales</p>
+        </div>
+
+      </a>
+
+
+      <!-- EVENEMENTS -->
+
+      <a href="#evenements" class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1762708590401-77c718061d7e?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Événement et célébration"
+          loading="lazy"
+        >
+
+        <div class="service-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <rect x="4" y="5" width="16" height="15" rx="2"/>
+            <path d="M8 3v4M16 3v4M4 10h16"/>
+            <path d="M8 14h3M8 17h5"/>
+
+          </svg>
+
+        </div>
+
+        <div class="service-content">
+          <h3>Événements</h3>
+          <p>Mariages • Célébrations • Moments particuliers</p>
+        </div>
+
+      </a>
+
+
+      <!-- ACTIVITES -->
+
+      <a href="#activites" class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Activité touristique au Maroc"
+          loading="lazy"
+        >
+
+        <div class="service-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M12 3l2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6 9.2 8.7 12 3Z"/>
+
+          </svg>
+
+        </div>
+
+        <div class="service-content">
+          <h3>Activités</h3>
+          <p>Désert • Surf • Montagne • Expériences locales</p>
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section id="destinations">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="kicker">À découvrir</div>
+
+      <h2>Destinations populaires</h2>
+
+      <p>
+        Des villes impériales aux dunes du Sahara, découvrez les différentes
+        facettes du Maroc.
+      </p>
+
+    </div>
+
+
+    <div class="destination-grid">
+
+
+      <!-- MARRAKECH -->
+
+      <article class="destination">
+
+        <img
+          src="https://images.unsplash.com/photo-1741918265297-510c428d04c3?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Marrakech Maroc"
+          loading="lazy"
+        >
+
+        <div class="destination-info">
+
+          <div class="destination-tag">
+            Ville rouge
+          </div>
+
+          <h3>Marrakech</h3>
+
+          <p>
+            Souks, palais, jardins et ambiance unique.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- FES -->
+
+      <article class="destination">
+
+        <img
+          src="https://images.unsplash.com/photo-1549565398-b8d75023348e?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Fès Maroc médina et architecture"
+          loading="lazy"
+        >
+
+        <div class="destination-info">
+
+          <div class="destination-tag">
+            Ville impériale
+          </div>
+
+          <h3>Fès</h3>
+
+          <p>
+            Médina historique, zellige, artisanat et patrimoine marocain.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHEFCHAOUEN -->
+
+      <article class="destination">
+
+        <img
+          src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=85&w=1400&auto=format&fit=crop"
+          alt="Chefchaouen ville bleue Maroc"
+          loading="lazy"
+        >
+
+        <div class="destination-info">
+
+          <div class="destination-tag">
+            Ville bleue
+          </div>
+
+          <h3>Chefchaouen</h3>
+
+          <p>
+            Ruelles bleues, montagnes et charme authentique.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- AGADIR -->
+
+      <article class="destination">
+
+        <img
+          src="https://images.unsplash.com/photo-1696763616212-c5bd6ef65762?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Agadir Maroc"
+          loading="lazy"
+        >
+
+        <div class="destination-info">
+
+          <div class="destination-tag">
+            Océan
+          </div>
+
+          <h3>Agadir</h3>
+
+          <p>
+            Plages, soleil, surf et escapades côtières.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- OUARZAZATE -->
+
+      <article class="destination">
+
+        <img
+          src="https://images.unsplash.com/photo-1527338611623-4e242563220a?auto=format&fit=crop&q=90&w=1400"
+          alt="Ouarzazate Aït Ben Haddou Maroc"
+          loading="lazy"
+        >
+
+        <div class="destination-info">
+
+          <div class="destination-tag">
+            Porte du désert
+          </div>
+
+          <h3>Ouarzazate</h3>
+
+          <p>
+            Kasbahs, cinéma, paysages et Aït Ben Haddou.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- MERZOUGA -->
+
+      <article class="destination">
+
+        <img
+          src="https://images.unsplash.com/photo-1508513268030-f8a9af25721c?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+          alt="Merzouga Sahara Maroc"
+          loading="lazy"
+        >
+
+        <div class="destination-info">
+
+          <div class="destination-tag">
+            Aventure
+          </div>
+
+          <h3>Merzouga</h3>
+
+          <p>
+            Dunes de l'Erg Chebbi, chameaux et nuits sahariennes.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VOYAGES -->
+
+<section class="split" id="voyages">
+
+  <div class="container split-box">
+
+    <div class="split-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1527338611623-4e242563220a?auto=format&fit=crop&q=90&w=1600"
+        alt="Circuit Maroc"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="split-content">
+
+      <div class="kicker">
+        Voyages sur mesure
+      </div>
+
+      <h2>
+        Votre Maroc,<br>
+        à votre rythme.
+      </h2>
+
+      <p>
+        Nous imaginons des circuits adaptés à votre style de voyage :
+        découverte culturelle, aventure, détente, désert, montagne
+        ou combinaison de plusieurs expériences.
+      </p>
+
+      <ul class="list">
+        <li>Circuits privés et personnalisés</li>
+        <li>Découverte des villes impériales</li>
+        <li>Sahara et nuits dans le désert</li>
+        <li>Montagnes et nature</li>
+        <li>Transport et hébergement coordonnés</li>
+      </ul>
+
+      <a href="#contact" class="btn btn-gold">
+        Créer mon voyage →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXPERIENCES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="kicker">
+        Expériences uniques
+      </div>
+
+      <h2>
+        Vivez le Maroc
+      </h2>
+
+      <p>
+        Des expériences pensées pour découvrir le Maroc avec authenticité,
+        confort et émotion.
+      </p>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+
+      <article class="experience">
+
+        <div class="experience-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1508513268030-f8a9af25721c?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+            alt="Dunes de Merzouga"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="kicker">
+            Aventure
+          </div>
+
+          <h3>
+            Aventure dans le désert
+          </h3>
+
+          <p>
+            Découvrez les dunes de Merzouga et vivez une expérience
+            authentique au cœur du Sahara marocain.
+          </p>
+
+          <a href="#activites" class="text-link">
+            Découvrir →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience">
+
+        <div class="experience-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1750859468404-db01cc8c59c2?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+            alt="Architecture marocaine"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="kicker">
+            Séjour
+          </div>
+
+          <h3>
+            Hôtels & Riads
+          </h3>
+
+          <p>
+            Riads traditionnels, hôtels de charme et adresses premium
+            pour une immersion élégante au Maroc.
+          </p>
+
+          <a href="#hotels" class="text-link">
+            Voir les séjours →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience">
+
+        <div class="experience-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&fm=jpg&q=90&w=1400"
+            alt="Activité au Maroc"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="kicker">
+            Océan
+          </div>
+
+          <h3>
+            Surf & Côte Atlantique
+          </h3>
+
+          <p>
+            Explorez les plages d'Agadir et du littoral marocain
+            à travers des expériences locales.
+          </p>
+
+          <a href="#activites" class="text-link">
+            Découvrir →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOTELS & RIADS -->
+
+<section class="detail" id="hotels">
+
+  <div class="container detail-box">
+
+    <div class="detail-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1763998861638-c83bef652bd7?auto=format&fit=crop&fm=jpg&q=90&w=1600"
+        alt="Riad marocain traditionnel"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="detail-content">
+
+      <div class="kicker">
+        Séjour
+      </div>
+
+      <h2>
+        Hôtels & Riads
+      </h2>
+
+      <p>
+        Choisissez des établissements qui correspondent à votre style
+        de voyage : riads traditionnels, hôtels de charme et adresses
+        premium au Maroc.
+      </p>
+
+      <div class="detail-points">
+
+        <div>
+          <span>◆</span>
+          Riads traditionnels
+        </div>
+
+        <div>
+          <span>◆</span>
+          Hôtels de charme
+        </div>
+
+        <div>
+          <span>◆</span>
+          Séjours premium
+        </div>
+
+        <div>
+          <span>◆</span>
+          Réservation personnalisée
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Trouver mon hébergement →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRANSPORT VIP -->
+
+<section class="detail" id="transport">
+
+  <div class="container detail-box">
+
+    <div class="detail-image">
+
+      <img
+        src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D1024%2Ch%3D1024%2Cfit%3Dcrop/m7VDo3KJlxH7XoQ0/mise-a-dispo-1-ncWtNUsYGiTrwU4D.png"
+        alt="Mercedes V-Class transport touristique VIP"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="detail-content">
+
+      <div class="kicker">
+        Confort & Chauffeur
+      </div>
+
+      <h2>
+        Transport VIP
+      </h2>
+
+      <p>
+        Déplacez-vous au Maroc dans un environnement confortable
+        et professionnel avec des véhicules adaptés aux transferts,
+        excursions et déplacements privés.
+      </p>
+
+      <div class="detail-points">
+
+        <div>
+          <span>◆</span>
+          Mercedes V-Class & véhicules premium
+        </div>
+
+        <div>
+          <span>◆</span>
+          Chauffeur privé
+        </div>
+
+        <div>
+          <span>◆</span>
+          Transferts aéroport
+        </div>
+
+        <div>
+          <span>◆</span>
+          Déplacements inter-villes
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Demander un transport →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RESTAURANTS -->
+
+<section class="detail" id="restaurants">
+
+  <div class="container detail-box">
+
+    <div class="detail-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1674657704103-b153830ba294?auto=format&fit=crop&fm=jpg&q=90&w=1600"
+        alt="Restaurant élégant"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="detail-content">
+
+      <div class="kicker">
+        Gastronomie
+      </div>
+
+      <h2>
+        Restaurants
+      </h2>
+
+      <p>
+        Découvrez des tables sélectionnées pour leur cuisine,
+        leur cadre et leur expérience.
+      </p>
+
+      <div class="detail-points">
+
+        <div>
+          <span>◆</span>
+          Cuisine marocaine
+        </div>
+
+        <div>
+          <span>◆</span>
+          Tables de charme
+        </div>
+
+        <div>
+          <span>◆</span>
+          Rooftops & restaurants premium
+        </div>
+
+        <div>
+          <span>◆</span>
+          Réservation personnalisée
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Trouver une table →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EVENEMENTS -->
+
+<section class="detail" id="evenements">
+
+  <div class="container detail-box">
+
+    <div class="detail-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1762708590401-77c718061d7e?auto=format&fit=crop&fm=jpg&q=90&w=1600"
+        alt="Événement et célébration"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="detail-content">
+
+      <div class="kicker">
+        Moments particuliers
+      </div>
+
+      <h2>
+        Événements
+      </h2>
+
+      <p>
+        Organisez vos moments importants au Maroc avec des solutions
+        adaptées aux célébrations privées, mariages et événements.
+      </p>
+
+      <div class="detail-points">
+
+        <div>
+          <span>◆</span>
+          Mariages
+        </div>
+
+        <div>
+          <span>◆</span>
+          Célébrations
+        </div>
+
+        <div>
+          <span>◆</span>
+          Événements privés
+        </div>
+
+        <div>
+          <span>◆</span>
+          Organisation personnalisée
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Organiser un événement →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ACTIVITES -->
+
+<section class="detail" id="activites">
+
+  <div class="container detail-box">
+
+    <div class="detail-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1674227055590-85b99a24b69b?auto=format&fit=crop&fm=jpg&q=90&w=1600"
+        alt="Activité touristique au Maroc"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="detail-content">
+
+      <div class="kicker">
+        Expériences locales
+      </div>
+
+      <h2>
+        Activités
+      </h2>
+
+      <p>
+        Ajoutez une touche d'aventure à votre séjour : désert,
+        surf, montagne, découverte culturelle et expériences locales.
+      </p>
+
+      <div class="detail-points">
+
+        <div>
+          <span>◆</span>
+          Surf & activités nautiques
+        </div>
+
+        <div>
+          <span>◆</span>
+          Excursions dans le désert
+        </div>
+
+        <div>
+          <span>◆</span>
+          Randonnées & montagne
+        </div>
+
+        <div>
+          <span>◆</span>
+          Expériences culturelles
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Découvrir les activités →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CULTURE -->
+
+<section class="detail" id="culture">
+
+  <div class="container detail-box">
+
+    <div class="detail-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1549565398-b8d75023348e?auto=format&fit=crop&fm=jpg&q=90&w=1600"
+        alt="Fès architecture et patrimoine marocain"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="detail-content">
+
+      <div class="kicker">
+        Culture & Patrimoine
+      </div>
+
+      <h2>
+        Le Maroc authentique
+      </h2>
+
+      <p>
+        Explorez les médinas, l'artisanat, le zellige, les kasbahs,
+        les traditions et les histoires qui donnent au Maroc son identité.
+      </p>
+
+      <div class="detail-points">
+
+        <div>
+          <span>◆</span>
+          Médinas historiques
+        </div>
+
+        <div>
+          <span>◆</span>
+          Zellige & artisanat
+        </div>
+
+        <div>
+          <span>◆</span>
+          Architecture traditionnelle
+        </div>
+
+        <div>
+          <span>◆</span>
+          Patrimoine marocain
+        </div>
+
+      </div>
+
+      <a href="#destinations" class="btn btn-gold">
+        Explorer le patrimoine →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong>6+</strong>
+      <span>Destinations principales</span>
+    </div>
+
+    <div class="stat">
+      <strong>6</strong>
+      <span>Services touristiques</span>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Maroc</span>
+    </div>
+
+    <div class="stat">
+      <strong>24/7</strong>
+      <span>Demande & assistance</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="kicker">
+        Pourquoi Rihla Vibes
+      </div>
+
+      <h2>
+        Une autre façon de voyager
+      </h2>
+
+      <p>
+        Un accompagnement pensé autour de vos envies et de votre expérience.
+      </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4Z"/>
+            <path d="m9 12 2 2 4-4"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Service personnalisé
+        </h3>
+
+        <p>
+          Des solutions adaptées à votre voyage et à vos besoins.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M12 4v16M4 12h16"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          100% Maroc
+        </h3>
+
+        <p>
+          Une approche centrée sur les destinations marocaines.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <path d="M12 3l2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Expériences authentiques
+        </h3>
+
+        <p>
+          Culture, gastronomie, nature et aventure.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8">
+
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M12 7v5l3 2"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Organisation simple
+        </h3>
+
+        <p>
+          Un seul point de contact pour organiser votre séjour.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT / CTA -->
+
+<section class="cta" id="contact">
+
+  <h2>
+    Prêt à vivre votre prochaine expérience au Maroc ?
+  </h2>
+
+  <p>
+    Dites-nous ce que vous souhaitez découvrir et nous vous aiderons
+    à construire votre expérience Rihla Vibes.
+  </p>
+
+  <a
+    href="https://wa.me/212761512272"
+    class="btn btn-gold"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp : 0761512272 →
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-grid">
+
+
+    <div class="footer-brand">
+
+      <a href="#accueil" class="logo">
+
+        <span class="logo-main">RIHLA</span>
+        <span class="logo-main">VIBES</span>
+        <span class="logo-sub">
+          TRAVEL • EXPLORE • EXPERIENCE
+        </span>
+
+      </a>
+
+      <p>
+        Votre porte d'entrée vers des voyages, séjours et expériences
+        authentiques au Maroc.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Découvrir
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="#destinations">
+          Destinations
+        </a>
+
+        <a href="#voyages">
+          Voyages
+        </a>
+
+        <a href="#culture">
+          Culture
+        </a>
+
+        <a href="#activites">
+          Activités
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Services
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="#hotels">
+          Hôtels & Riads
+        </a>
+
+        <a href="#transport">
+          Transport VIP
+        </a>
+
+        <a href="#restaurants">
+          Restaurants
+        </a>
+
+        <a href="#evenements">
+          Événements
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Contact
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="https://wa.me/212761512272"
+           target="_blank"
+           rel="noopener">
+          WhatsApp
+        </a>
+
+        <a href="tel:+212761512272">
+          0761512272
+        </a>
+
+        <a href="#contact">
+          Planifier mon voyage
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 Rihla Vibes — Tous droits réservés.
+    </span>
+
+    <span>
+      Travel • Explore • Experience
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOATING -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/212761512272"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contacter Rihla Vibes sur WhatsApp"
+>
+
+  <svg viewBox="0 0 24 24" fill="currentColor">
+
+    <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.1 1.6 5.9L.1 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.1-3.5-8.3ZM12.1 21.7c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.8 1 1-3.7-.2-.4c-1-1.5-1.5-3.3-1.5-5.2C2.2 6.2 6.6 1.8 12.1 1.8c2.7 0 5.2 1 7.1 2.9s2.9 4.4 2.9 7.1c0 5.5-4.5 9.9-10 9.9Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.5-1.6-1.8-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-1-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.3-.2-.4-.5-.5Z"/>
+
+  </svg>
+
+</a>
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+menuBtn.addEventListener("click",function(){
+  nav.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav a").forEach(function(link){
+
+  link.addEventListener("click",function(){
+    nav.classList.remove("open");
+  });
+
+});
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchSite(){
+
+  const input = document.getElementById("searchInput");
+  const value = input.value.trim().toLowerCase();
+
+  if(!value){
+
+    document.getElementById("destinations")
+      .scrollIntoView({behavior:"smooth"});
+
+    return;
+  }
+
+
+  const mapping = {
+
+    "marrakech":"#destinations",
+    "marrakesh":"#destinations",
+
+    "fes":"#destinations",
+    "fès":"#destinations",
+    "fez":"#destinations",
+
+    "chefchaouen":"#destinations",
+
+    "agadir":"#destinations",
+
+    "ouarzazate":"#destinations",
+
+    "merzouga":"#destinations",
+
+    "sahara":"#activites",
+
+    "desert":"#activites",
+    "désert":"#activites",
+
+    "riad":"#hotels",
+
+    "hotel":"#hotels",
+    "hôtel":"#hotels",
+
+    "transport":"#transport",
+
+    "vip":"#transport",
+
+    "restaurant":"#restaurants",
+    "restaurants":"#restaurants",
+
+    "circuit":"#voyages",
+
+    "voyage":"#voyages",
+
+    "activité":"#activites",
+    "activites":"#activites",
+    "activités":"#activites",
+
+    "evenement":"#evenements",
+    "événement":"#evenements",
+
+    "culture":"#culture",
+
+    "zellige":"#culture"
+
+  };
+
+
+  let target = "#destinations";
+
+
+  for(const key in mapping){
+
+    if(value.includes(key)){
+
+      target = mapping[key];
+      break;
+
+    }
+
+  }
+
+
+  document.querySelector(target)
+    .scrollIntoView({behavior:"smooth"});
+
+}
+
+
+/* =========================
+   ENTER SEARCH
+========================= */
+
+document.getElementById("searchInput")
+  .addEventListener("keydown",function(e){
+
+    if(e.key === "Enter"){
+      searchSite();
+    }
+
+  });
+
+
+/* =========================
+   IMAGE FALLBACK
+========================= */
+
+document.querySelectorAll("img").forEach(function(img){
+
+  img.addEventListener("error",function(){
+
+    this.style.background =
+      "linear-gradient(135deg,#07111d,#9b7130)";
+
+    this.removeAttribute("src");
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
